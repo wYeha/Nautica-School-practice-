@@ -1,0 +1,242 @@
+@mixin button-desktop {
+	background-color: $color-red-500;
+	color: $color-white;
+	border: none;
+	border-radius: $border-radius;
+	font-family: 'Noto Sans';
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 143%;
+	padding: 16px 26px;
+	transition: .3s;
+
+	&:hover {
+		background-color: $color-red-400;
+	}
+
+	&:focus {
+		outline: none;
+		box-shadow: 0 0 0 5px $color-red-100;
+	}
+
+	&:active {
+		background-color: $color-red-600;
+	}
+
+	&:disabled {
+		background-color: $color-light-grey;
+		color: $color-dark-grey;
+	}
+}
+
+@mixin h1-desktop {
+	font-size: 180px;
+	text-transform: uppercase;
+	line-height: normal;
+}
+
+@mixin h2-desktop {
+	font-size: 96px;
+	line-height: 96%;
+}
+
+@mixin h4-desktop {
+	font-size: 40px;
+	line-height: 120%;
+}
+
+@mixin h1-laptop {
+	font-size: 150px;
+	text-transform: uppercase;
+}
+
+@mixin h2-laptop {
+	font-size: 75px;
+	line-height: 96%;
+}
+
+@mixin h4-laptop {
+	font-size: 40px;
+	line-height: 120%;
+}
+
+@mixin h1-tablet {
+	font-size: 110px;
+	text-transform: uppercase;
+}
+
+@mixin h2-tablet {
+	font-size: 58px;
+	line-height: 96%;
+}
+
+@mixin h4-tablet {
+	font-size: 30px;
+	line-height: 120%;
+}
+
+@mixin h1-phone-landscape {
+	font-size: 88px;
+	line-height: 100%;
+	text-transform: uppercase;
+}
+
+@mixin h2-phone-landscape {
+	font-size: 45px;
+	line-height: 96%;
+}
+
+@mixin h4-phone-landscape {
+	font-size: 24px;
+	line-height: 120%;
+}
+
+@mixin h1-phone-portrait {
+	font-size: 54px;
+	text-transform: uppercase;
+}
+
+@mixin h2-phone-portrait {
+	font-size: 29px;
+	line-height: 96%;
+}
+
+@mixin h4-phone-portrait {
+	font-size: 24px;
+	line-height: 120%;
+}
+
+
+// weqew
+
+@mixin h3-desktop {
+	font-size: 28px;
+	line-height: 110%;
+	text-transform: uppercase;
+}
+
+@mixin h5-desktop {
+	font-size: 20px;
+	line-height: 120%;
+	text-transform: uppercase;
+}
+
+@mixin h6-desktop {
+	font-size: 24px;
+	line-height: 120%;
+}
+
+@mixin h3-laptop {
+	font-size: 26px;
+	line-height: 110%;
+	text-transform: uppercase;
+}
+
+@mixin h5-laptop {
+	font-size: 18px;
+	line-height: 120%;
+	text-transform: uppercase;
+}
+
+@mixin h6-laptop {
+	font-size: 20px;
+	line-height: 120%;
+}
+
+@mixin h3-tablet {
+	font-size: 20px;
+	line-height: 110%;
+	text-transform: uppercase;
+}
+
+@mixin h5-tablet {
+	font-size: 15px;
+	line-height: 120%;
+	text-transform: uppercase;
+}
+
+@mixin h6-tablet {
+	font-size: 16px;
+	line-height: 120%;
+}
+
+@mixin h3-phone-landscape {
+	font-size: 15px;
+	line-height: 110%;
+	text-transform: uppercase;
+}
+
+@mixin h5-phone-landscape {
+	font-size: 14px;
+	line-height: 120%;
+	text-transform: uppercase;
+}
+
+@mixin h6-phone-landscape {
+	font-size: 15px;
+	line-height: 120%;
+}
+
+@mixin h3-phone-portrait {
+	font-size: 15px;
+	line-height: 110%;
+	text-transform: uppercase;
+}
+
+@mixin h5-phone-portrait {
+	font-size: 14px;
+	line-height: 120%;
+	text-transform: uppercase;
+}
+
+@mixin h6-phone-portrait {
+	font-size: 15px;
+	line-height: 120%;
+}
+
+
+//body 
+
+@mixin p-desktop {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 138%;
+	color: $color-dark-blue;
+}
+
+@mixin p-category-card-desctop {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 130%;
+	color: $color-black;
+}
+
+
+//button
+
+@mixin button-medium {
+	font-family: 'Noto Sans';
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 143%;
+	color: $color-dark-blue;
+}
+
+
+// accent-numbers
+
+@mixin accent-numbers-desktop {
+	font-family: 'Bebas Neue';
+	font-weight: 700;
+	font-size: 70px;
+	color: $color-dark-blue;
+}
+
+// caption
+
+@mixin caption-hint-desktop {
+	font-family: 'Noto Sans';
+	font-weight: 400;
+	font-size: 13px;
+	color: $color-dark-blue;
+}

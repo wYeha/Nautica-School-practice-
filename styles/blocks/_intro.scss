@@ -1,0 +1,41 @@
+.intro {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	position: relative;
+	margin-bottom: $block-margin-desktop;
+
+	&__title {
+		@include h1-desktop;
+		position: absolute;
+		top: 143px;
+		left: 0;
+		text-align: center;
+		z-index: 1;
+		line-height: 1;
+	}
+
+	&__slogan {
+		width: 236px;
+		@include p-desktop;
+	}
+
+	&__image-box {
+		position: relative;
+	}
+
+	&__image {
+		border-radius: $border-radius;
+	}
+
+	&__sail {
+		position: absolute;
+		top: 135px;
+		left: 115px;
+		z-index: 10;
+	}
+
+	&__signup {
+		@include button-desktop;
+	}
+}

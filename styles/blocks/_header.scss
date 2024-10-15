@@ -1,0 +1,34 @@
+.header {
+
+	&__inner {
+		padding: 20px 0 10px 0;
+		max-width: $container-desktop;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__nav {}
+
+	&__ul {
+		display: flex;
+		gap: 24px;
+	}
+
+	&__li {}
+
+	&__a {
+		font-family: 'Noto Sans';
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 143%;
+		color: $color-black;
+	}
+}
+
+.phone-number {
+	&_top {
+		color: $color-dark-blue;
+		font-weight: 700;
+	}
+}

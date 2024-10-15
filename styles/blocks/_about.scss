@@ -1,0 +1,34 @@
+.about {
+	margin-bottom: $block-margin-desktop;
+
+	&__title {
+		@include h2-desktop;
+		text-indent: 300px;
+		margin-bottom: 80px;
+	}
+
+	&__info-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		height: 88px;
+	}
+
+	&__info {
+		display: flex;
+		gap: 30px;
+	}
+
+	&__info-1 {
+		width: 270px;
+	}
+
+	&__info-2 {
+		width: 500px;
+	}
+
+
+	&__more {
+		@include button-desktop;
+	}
+}

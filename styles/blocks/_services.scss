@@ -1,0 +1,80 @@
+.services {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	&__container {
+		display: flex;
+		gap: $content-gap-large;
+		margin-bottom: $block-margin-desktop;
+	}
+
+	&__title {}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(216px, 1fr));
+		grid-template-rows: repeat(2, minmax(130px, 1fr));
+		gap: $content-gap-large;
+	}
+
+	&__category {
+		background-color: $color-white;
+		padding: 16px 16px 71px;
+		border-radius: $border-radius;
+		position: relative;
+		overflow: hidden;
+		transition: .3s;
+	}
+
+	&__h6 {
+		@include h6-desktop;
+		padding-bottom: 6px;
+	}
+
+	&__text {
+		@include p-category-card-desctop;
+	}
+
+	&__image {
+		border-radius: $border-radius;
+		width: 570px;
+		height: 570px;
+		pointer-events: none;
+	}
+
+	&__more {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		position: absolute;
+		right: -50%;
+		bottom: 16px;
+		visibility: hidden;
+
+		&_text {
+			@include button-medium;
+			color: $color-white;
+		}
+
+		&_arrow {}
+	}
+}
+
+.services__category:hover {
+	background-color: $color-blue-500;
+}
+
+.services__category:hover .services__more {
+	visibility: visible;
+	transition: .3s;
+	right: 16px;
+}
+
+.services__category:hover .services__h6 {
+	color: $color-white;
+}
+
+.services__category:hover .services__text {
+	color: $color-white;
+}

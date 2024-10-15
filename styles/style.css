@@ -1,0 +1,586 @@
+@charset "UTF-8";
+/**
+  Нормализация блочной модели
+ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/**
+	 Убираем внутренние отступы слева тегам списков,
+	 у которых есть атрибут class
+	*/
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+/**
+	 Убираем внешние отступы body и двум другим тегам,
+	 у которых есть атрибут class
+	*/
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
+}
+
+/**
+	 Убираем внешние отступы вертикали нужным тегам,
+	 у которых есть атрибут class
+	*/
+:where(h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl):where([class]) {
+  margin-block: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(fieldset[class]) {
+  margin-left: 0;
+  padding: 0;
+  border: none;
+}
+
+/**
+	 Убираем стандартный маркер маркированному списку,
+	 у которого есть атрибут class
+	*/
+:where(ul[class]) {
+  list-style: none;
+}
+
+:where(address[class]) {
+  font-style: normal;
+}
+
+/**
+	 Обнуляем вертикальные внешние отступы параграфа,
+	 объявляем локальную переменную для внешнего отступа вниз,
+	 чтобы избежать взаимодействие с более сложным селектором
+	*/
+p {
+  --paragraphMarginBottom: 24px;
+  margin-block: 0;
+}
+
+/**
+	 Внешний отступ вниз для параграфа без атрибута class,
+	 который расположен не последним среди своих соседних элементов
+	*/
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
+}
+
+/**
+	 Упрощаем работу с изображениями
+	*/
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/**
+	 Наследуем свойства шрифт для полей ввода
+	*/
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  /**
+  	 Пригодится в большинстве ситуаций
+  	 (когда, например, нужно будет "прижать" футер к низу сайта)
+  	*/
+  height: 100%;
+}
+
+/**
+	 Плавный скролл
+	*/
+html,
+:has(:target) {
+  scroll-behavior: smooth;
+}
+
+body {
+  /**
+  	 Пригодится в большинстве ситуаций
+  	 (когда, например, нужно будет "прижать" футер к низу сайта)
+  	*/
+  min-height: 100%;
+  /**
+  	 Унифицированный интерлиньяж
+  	*/
+  line-height: 1.5;
+}
+
+/**
+	 Приводим к единому цвету svg-элементы
+	*/
+svg *[fill] {
+  fill: currentColor;
+}
+
+svg *[stroke] {
+  stroke: currentColor;
+}
+
+/**
+	 Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+	*/
+svg * {
+  transition-property: fill, stroke;
+}
+
+/**
+	 Удаляем все анимации и переходы для людей,
+	 которые предпочитают их не использовать
+	*/
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url(../fonts/BebasNeueBold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url(../fonts/NotoSans-Regular.woff2) format("woff2");
+  font-display: swap;
+}
+.container-desktop {
+  max-width: 1170px;
+}
+
+.container-laptop {
+  max-width: 954px;
+}
+
+.container-100 {
+  max-width: 100%;
+}
+
+.center {
+  padding-left: calc(50% - 585px);
+  padding-right: calc(50% - 585px);
+}
+
+body {
+  background-color: #EBF0FA;
+}
+
+h3,
+h5,
+h6 {
+  font-weight: 700;
+  font-family: "Noto Sans";
+  color: #373F51;
+}
+
+h1,
+h2,
+h4 {
+  font-weight: 700;
+  font-family: "Bebas Neue";
+  color: #373F51;
+}
+
+p {
+  font-family: "Noto Sans";
+  color: #373F51;
+}
+
+a {
+  text-decoration: none;
+}
+
+@keyframes logo {
+  10% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+  85% {
+    transform: rotate(10deg);
+  }
+  95% {
+    transform: rotate(-5deg);
+  }
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.logo__text {
+  font-family: "Bebas Neue";
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 88%;
+  width: 64px;
+  color: #373F51;
+}
+.logo__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  background: #D00000;
+  position: relative;
+}
+.logo__container::after {
+  position: absolute;
+  content: "";
+  width: 60%;
+  height: 60%;
+  border: 1px solid #FBFBFB;
+  border-radius: 50%;
+}
+.logo:hover .logo__image {
+  animation: logo 0.8s ease-in-out;
+}
+
+.phone-number {
+  font-family: "Noto Sans";
+  font-size: 14px;
+  line-height: 130%;
+}
+
+.text-accent {
+  color: #2892D7;
+}
+
+.header__inner {
+  padding: 20px 0 10px 0;
+  max-width: 1170px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__ul {
+  display: flex;
+  gap: 24px;
+}
+.header__a {
+  font-family: "Noto Sans";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: #2B2B2B;
+}
+
+.phone-number_top {
+  color: #373F51;
+  font-weight: 700;
+}
+
+.intro {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 150px;
+}
+.intro__title {
+  font-size: 180px;
+  text-transform: uppercase;
+  line-height: normal;
+  position: absolute;
+  top: 143px;
+  left: 0;
+  text-align: center;
+  z-index: 1;
+  line-height: 1;
+}
+.intro__slogan {
+  width: 236px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 138%;
+  color: #373F51;
+}
+.intro__image-box {
+  position: relative;
+}
+.intro__image {
+  border-radius: 7px;
+}
+.intro__sail {
+  position: absolute;
+  top: 135px;
+  left: 115px;
+  z-index: 10;
+}
+.intro__signup {
+  background-color: #D00000;
+  color: #FBFBFB;
+  border: none;
+  border-radius: 7px;
+  font-family: "Noto Sans";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  padding: 16px 26px;
+  transition: 0.3s;
+}
+.intro__signup:hover {
+  background-color: #FB2525;
+}
+.intro__signup:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px #FFB6B6;
+}
+.intro__signup:active {
+  background-color: #A61010;
+}
+.intro__signup:disabled {
+  background-color: #D9D9D9;
+  color: #7E7E7E;
+}
+
+.about {
+  margin-bottom: 150px;
+}
+.about__title {
+  font-size: 96px;
+  line-height: 96%;
+  text-indent: 300px;
+  margin-bottom: 80px;
+}
+.about__info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 88px;
+}
+.about__info {
+  display: flex;
+  gap: 30px;
+}
+.about__info-1 {
+  width: 270px;
+}
+.about__info-2 {
+  width: 500px;
+}
+.about__more {
+  background-color: #D00000;
+  color: #FBFBFB;
+  border: none;
+  border-radius: 7px;
+  font-family: "Noto Sans";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  padding: 16px 26px;
+  transition: 0.3s;
+}
+.about__more:hover {
+  background-color: #FB2525;
+}
+.about__more:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px #FFB6B6;
+}
+.about__more:active {
+  background-color: #A61010;
+}
+.about__more:disabled {
+  background-color: #D9D9D9;
+  color: #7E7E7E;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.services__container {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 150px;
+}
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(216px, 1fr));
+  grid-template-rows: repeat(2, minmax(130px, 1fr));
+  gap: 30px;
+}
+.services__category {
+  background-color: #FBFBFB;
+  padding: 16px 16px 71px;
+  border-radius: 7px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.services__h6 {
+  font-size: 24px;
+  line-height: 120%;
+  padding-bottom: 6px;
+}
+.services__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #2B2B2B;
+}
+.services__image {
+  border-radius: 7px;
+  width: 570px;
+  height: 570px;
+  pointer-events: none;
+}
+.services__more {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: absolute;
+  right: -50%;
+  bottom: 16px;
+  visibility: hidden;
+}
+.services__more_text {
+  font-family: "Noto Sans";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  color: #373F51;
+  color: #FBFBFB;
+}
+.services__category:hover {
+  background-color: #2892D7;
+}
+
+.services__category:hover .services__more {
+  visibility: visible;
+  transition: 0.3s;
+  right: 16px;
+}
+
+.services__category:hover .services__h6 {
+  color: #FBFBFB;
+}
+
+.services__category:hover .services__text {
+  color: #FBFBFB;
+}
+
+.advantages {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.advantages__title {
+  visibility: hidden;
+  position: absolute;
+  left: -99999px;
+}
+.advantages__welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+.advantages__welcome-text {
+  font-family: "Noto Sans";
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 120%;
+  color: #373F51;
+  max-width: 470px;
+}
+.advantages__button {
+  background-color: #D00000;
+  color: #FBFBFB;
+  border: none;
+  border-radius: 7px;
+  font-family: "Noto Sans";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  padding: 16px 26px;
+  transition: 0.3s;
+}
+.advantages__button:hover {
+  background-color: #FB2525;
+}
+.advantages__button:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px #FFB6B6;
+}
+.advantages__button:active {
+  background-color: #A61010;
+}
+.advantages__button:disabled {
+  background-color: #D9D9D9;
+  color: #7E7E7E;
+}
+.advantages__statistics {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+.advantages__statistics-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 138%;
+  color: #373F51;
+}
+.advantages__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 270px));
+  grid-template-rows: repeat(2, minmax(77px, 51px));
+  gap: 30px;
+}
+.advantages__element {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.advantages__number {
+  line-height: normal;
+  font-family: "Bebas Neue";
+  font-weight: 700;
+  font-size: 70px;
+  color: #373F51;
+  line-height: 0.8;
+}
+.advantages__number-text {
+  font-family: "Noto Sans";
+  font-weight: 400;
+  font-size: 13px;
+  color: #373F51;
+}/*# sourceMappingURL=style.css.map */
