@@ -29,6 +29,7 @@
 	}
 }
 
+
 @mixin h1-desktop {
 	font-size: 180px;
 	text-transform: uppercase;
@@ -199,12 +200,13 @@
 
 @mixin p-desktop {
 	font-weight: 400;
+	width: 50%;
 	font-size: 18px;
 	line-height: 138%;
 	color: $color-dark-blue;
 }
 
-@mixin p-category-card-desctop {
+@mixin p-category-card-desktop {
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 130%;
@@ -238,5 +240,16 @@
 	font-family: 'Noto Sans';
 	font-weight: 400;
 	font-size: 13px;
+	color: $color-dark-blue;
+}
+
+
+// pills
+
+@mixin pills-medium {
+	font-family: 'Noto Sans';
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 130%;
 	color: $color-dark-blue;
 }

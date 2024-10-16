@@ -2,12 +2,7 @@
 	display: flex;
 	justify-content: space-between;
 	gap: $content-gap-large;
-
-	&__title {
-		visibility: hidden;
-		position: absolute;
-		left: -99999px;
-	}
+	margin-bottom: $block-margin-desktop;
 
 	&__welcome {
 		display: flex;

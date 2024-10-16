@@ -115,3 +115,21 @@ a {
 .text-accent {
 	color: $color-blue-500;
 }
+
+.visually-hidden {
+	visibility: hidden;
+	position: absolute;
+	left: -99999px;
+}
+
+img {
+	pointer-events: none;
+}
+
+.button-signup {
+	@include button-medium;
+	display: flex;
+	justify-content: space-between;
+	gap: 6px;
+	color: $color-red-500;
+}

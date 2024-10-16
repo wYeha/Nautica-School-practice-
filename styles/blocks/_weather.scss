@@ -1,0 +1,117 @@
+.weather {
+	display: flex;
+	gap: $content-gap-large;
+	height: 570px;
+
+	&__title {}
+
+	&__image {
+		width: 100%;
+		border-radius: $border-radius;
+	}
+
+	&__content {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		&_title {
+			@include h6-desktop;
+			padding-bottom: 14px;
+		}
+
+		&_text {
+			@include p-category-card-desktop;
+		}
+	}
+
+	&__content-box {
+		display: flex;
+		flex-direction: column;
+		padding: $content-gap-large;
+		background-color: $color-white;
+		border-radius: $border-radius;
+	}
+
+	&__article {}
+
+	&__button-box {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 66px;
+	}
+
+	&__button {
+		&_more {
+			@include button-medium;
+			color: $color-blue-500;
+			border-bottom: 1px solid $color-blue-500;
+		}
+	}
+
+	&__signup {
+		&_text {
+			white-space: nowrap;
+		}
+	}
+
+	&__radio-box {
+		margin-bottom: 26px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		border: 1.5px solid $color-blue-500;
+		border-radius: 50px;
+		box-sizing: border-box;
+		padding: 0 6px;
+		gap: 10px;
+		list-style: none;
+		isolation: isolate;
+		height: 57px;
+		width: 357px;
+	}
+
+	&__radio-box:after {
+		content: "";
+		height: 45px;
+		position: absolute;
+		top: calc(50% - 22.5px);
+		border-radius: 50px;
+		background-color: $color-blue-500;
+		z-index: -1;
+		transition: 0.2s ease;
+	}
+
+	&__radio-box:has(#one:checked):after {
+		left: 6px;
+		width: 93px;
+	}
+
+	&__radio-box:has(#two:checked):after {
+		left: 109px;
+		width: 123px;
+	}
+
+	&__radio-box:has(#three:checked):after {
+		left: 242px;
+		width: 107px;
+	}
+
+	&__radio-item {
+		padding: 16px 30px;
+	}
+}
+
+.radio-label {
+	@include pills-medium;
+}
+
+.radio-input {
+	display: none;
+}
+
+:checked+.radio-label {
+	color: $color-white;
+}
