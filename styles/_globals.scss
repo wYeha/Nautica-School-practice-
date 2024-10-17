@@ -133,3 +133,51 @@ img {
 	gap: 6px;
 	color: $color-red-500;
 }
+
+// стили для текстового блока (два одинаковых)
+
+.description-block {
+	margin-bottom: $block-margin-desktop;
+
+	&__title {
+		@include h2-desktop;
+		text-indent: 300px;
+		margin-bottom: 80px;
+	}
+
+	&__line {
+		white-space: nowrap;
+	}
+
+	&__info-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		height: 88px;
+	}
+
+	&__info {
+		display: flex;
+		gap: 30px;
+	}
+
+	&__info-1 {
+		width: 270px;
+
+		&_certificates {
+			width: 330px;
+		}
+	}
+
+	&__info-2 {
+		width: 500px;
+
+		&_certificates {
+			width: 370px;
+		}
+	}
+
+	&__more {
+		@include button-desktop;
+	}
+}

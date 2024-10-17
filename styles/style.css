@@ -302,6 +302,67 @@ img {
   color: #D00000;
 }
 
+.description-block {
+  margin-bottom: 150px;
+}
+.description-block__title {
+  font-size: 96px;
+  line-height: 96%;
+  text-indent: 300px;
+  margin-bottom: 80px;
+}
+.description-block__line {
+  white-space: nowrap;
+}
+.description-block__info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 88px;
+}
+.description-block__info {
+  display: flex;
+  gap: 30px;
+}
+.description-block__info-1 {
+  width: 270px;
+}
+.description-block__info-1_certificates {
+  width: 330px;
+}
+.description-block__info-2 {
+  width: 500px;
+}
+.description-block__info-2_certificates {
+  width: 370px;
+}
+.description-block__more {
+  background-color: #D00000;
+  color: #FBFBFB;
+  border: none;
+  border-radius: 7px;
+  font-family: "Noto Sans";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  padding: 16px 26px;
+  transition: 0.3s;
+}
+.description-block__more:hover {
+  background-color: #FB2525;
+}
+.description-block__more:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px #FFB6B6;
+}
+.description-block__more:active {
+  background-color: #A61010;
+}
+.description-block__more:disabled {
+  background-color: #D9D9D9;
+  color: #7E7E7E;
+}
+
 .header__inner {
   padding: 20px 0 10px 0;
   max-width: 1170px;
@@ -347,7 +408,6 @@ img {
 .intro__slogan {
   width: 236px;
   font-weight: 400;
-  width: 50%;
   font-size: 18px;
   line-height: 138%;
   color: #373F51;
@@ -387,58 +447,6 @@ img {
   background-color: #A61010;
 }
 .intro__signup:disabled {
-  background-color: #D9D9D9;
-  color: #7E7E7E;
-}
-
-.about {
-  margin-bottom: 150px;
-}
-.about__title {
-  font-size: 96px;
-  line-height: 96%;
-  text-indent: 300px;
-  margin-bottom: 80px;
-}
-.about__info-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  height: 88px;
-}
-.about__info {
-  display: flex;
-  gap: 30px;
-}
-.about__info-1 {
-  width: 270px;
-}
-.about__info-2 {
-  width: 500px;
-}
-.about__more {
-  background-color: #D00000;
-  color: #FBFBFB;
-  border: none;
-  border-radius: 7px;
-  font-family: "Noto Sans";
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 143%;
-  padding: 16px 26px;
-  transition: 0.3s;
-}
-.about__more:hover {
-  background-color: #FB2525;
-}
-.about__more:focus {
-  outline: none;
-  box-shadow: 0 0 0 5px #FFB6B6;
-}
-.about__more:active {
-  background-color: #A61010;
-}
-.about__more:disabled {
   background-color: #D9D9D9;
   color: #7E7E7E;
 }
@@ -574,7 +582,6 @@ img {
 }
 .advantages__statistics-text {
   font-weight: 400;
-  width: 50%;
   font-size: 18px;
   line-height: 138%;
   color: #373F51;
@@ -609,21 +616,22 @@ img {
   display: flex;
   gap: 30px;
   height: 570px;
+  margin-bottom: 150px;
 }
 .weather__image {
-  width: 100%;
   border-radius: 7px;
 }
 .weather__content {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 30px;
 }
 .weather__content_title {
   font-size: 24px;
   line-height: 120%;
   padding-bottom: 14px;
+  line-height: 0.751;
 }
 .weather__content_text {
   font-weight: 400;
@@ -632,8 +640,10 @@ img {
   color: #2B2B2B;
 }
 .weather__content-box {
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 30px;
   background-color: #FBFBFB;
   border-radius: 7px;
@@ -641,7 +651,6 @@ img {
 .weather__button-box {
   display: flex;
   justify-content: space-between;
-  padding-top: 66px;
 }
 .weather__button_more {
   font-family: "Noto Sans";
@@ -693,16 +702,14 @@ img {
   left: 242px;
   width: 107px;
 }
-.weather__radio-item {
-  padding: 16px 30px;
-}
-
 .radio-label {
   font-family: "Noto Sans";
   font-weight: 400;
   font-size: 18px;
   line-height: 130%;
   color: #373F51;
+  cursor: pointer;
+  padding: 16px 30px;
 }
 
 .radio-input {
@@ -711,4 +718,17 @@ img {
 
 :checked + .radio-label {
   color: #FBFBFB;
+}
+
+.form {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: 57px 267px;
+}
+.form__title {
+  order: 1;
+}
+.form__form {
+  order: 2;
 }/*# sourceMappingURL=style.css.map */

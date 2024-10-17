@@ -1,0 +1,18 @@
+.form {
+	display: grid;
+	gap: 30px;
+	grid-template-columns: repeat(2, 50%);
+	grid-template-rows: 57px 267px;
+
+	&__title{
+		order: 1;
+	}
+
+	&__form {
+		order: 2;
+	}
+}
+.center {
+}
+.text-accent {
+}
