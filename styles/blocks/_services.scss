@@ -9,7 +9,9 @@
 		margin-bottom: $block-margin-desktop;
 	}
 
-	&__title {}
+	&__title {
+		@include h3-desktop;
+	}
 
 	&__grid {
 		display: grid;
@@ -33,7 +35,7 @@
 	}
 
 	&__text {
-		@include p-category-card-desktop;
+		@include category-card-desktop;
 	}
 
 	&__image {

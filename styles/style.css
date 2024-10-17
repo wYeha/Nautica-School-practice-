@@ -346,7 +346,6 @@ img {
   font-size: 14px;
   line-height: 143%;
   padding: 16px 26px;
-  transition: 0.3s;
 }
 .description-block__more:hover {
   background-color: #FB2525;
@@ -434,7 +433,6 @@ img {
   font-size: 14px;
   line-height: 143%;
   padding: 16px 26px;
-  transition: 0.3s;
 }
 .intro__signup:hover {
   background-color: #FB2525;
@@ -461,6 +459,11 @@ img {
   gap: 30px;
   margin-bottom: 150px;
 }
+.services__title {
+  font-size: 28px;
+  line-height: 110%;
+  text-transform: uppercase;
+}
 .services__grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(216px, 1fr));
@@ -481,6 +484,7 @@ img {
   padding-bottom: 6px;
 }
 .services__text {
+  font-family: "Noto Sans";
   font-weight: 400;
   font-size: 16px;
   line-height: 130%;
@@ -558,7 +562,6 @@ img {
   font-size: 14px;
   line-height: 143%;
   padding: 16px 26px;
-  transition: 0.3s;
 }
 .advantages__button:hover {
   background-color: #FB2525;
@@ -634,6 +637,7 @@ img {
   line-height: 0.751;
 }
 .weather__content_text {
+  font-family: "Noto Sans";
   font-weight: 400;
   font-size: 16px;
   line-height: 130%;
@@ -722,13 +726,88 @@ img {
 
 .form {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
-  grid-template-columns: repeat(2, 50%);
-  grid-template-rows: 57px 267px;
+}
+.form input[type=text], .form input[type=tel], .form input[type=email] {
+  padding: 13px 14px;
+  border: 1px solid #EAF4FB;
+  max-height: 47px;
+  width: 100%;
+  border-radius: 7px;
+  box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+  font-family: "Noto Sans";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #2B2B2B;
+}
+.form input[type=text]:focus, .form input[type=tel]:focus, .form input[type=email]:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 3px #C2DEF0;
 }
 .form__title {
-  order: 1;
+  font-size: 28px;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+.form__image {
+  border-radius: 7px;
 }
 .form__form {
-  order: 2;
+  grid-area: 1/2/span 2/2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.form__input-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 20px;
+}
+.form__input {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.form__input-box div:nth-child(3), .form__input-box div:nth-child(4) {
+  grid-column: span 1;
+}
+.form__label {
+  font-family: "Noto Sans";
+  font-weight: 500;
+  font-size: 14px;
+  color: #2B2B2B;
+}
+.form__button-box {
+  display: flex;
+  justify-content: space-between;
+}
+.form__button {
+  background-color: #D00000;
+  color: #FBFBFB;
+  border: none;
+  border-radius: 7px;
+  font-family: "Noto Sans";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  padding: 16px 26px;
+}
+.form__button:hover {
+  background-color: #FB2525;
+}
+.form__button:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px #FFB6B6;
+}
+.form__button:active {
+  background-color: #A61010;
+}
+.form__button:disabled {
+  background-color: #D9D9D9;
+  color: #7E7E7E;
 }/*# sourceMappingURL=style.css.map */

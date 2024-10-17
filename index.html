@@ -250,11 +250,34 @@
 
 	<section class="form center">
 		<h3 class="form__title">Заполните форму и получите <span class="text-accent">скидку на первое посещение</span></h3>
-		<img src="images/form-image.jpg" alt="Заполните форму и получите скидку на первое посещение">
+		<img class="form__image" src="images/form-image.jpg" alt="Заполните форму и получите скидку на первое посещение">
 
 		<form class="form__form" action="">
-			<input id="qwe" type="text">
-			<label for="qwe"> Lorem, ipsum dolor. </label>
+			<div class="form__input-box">
+				<div class="form__input">
+					<label class="form__label">Ваше имя*</label>
+					<input type="text" placeholder="Имя" required>
+				</div>
+				<div class="form__input">
+					<label class="form__label">Ваша фамилия*</label>
+					<input type="text" placeholder="Фамилия" required>
+				</div>
+				<div class="form__input">
+					<label class="form__label">Номер телефона*</label>
+					<input type="tel" placeholder="+7(      )    -    -" required>
+				</div>
+				<div class="form__input">
+					<label class="form__label">Электронная почта*</label>
+					<input type="email" placeholder="Адрес эл. почты" required>
+				</div>
+			</div>
+
+			<div class="form__button-box">
+				<div class="form__checkbox-box">
+					<input type="checkbox">
+					<label for="">Я принимаю <a href="">политику обработки персональных данных</a></label>
+				</div>
+			</div>
 		</form>
 	</section>
 
