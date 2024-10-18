@@ -198,19 +198,17 @@ input[type="checkbox"] {
 	border-radius: 4px;
 	border: 1px solid $color-blue-100;
 	position: relative;
-}
+	padding: 2px;
+	box-sizing: border-box;
 
-.fake-checkbox::before {
-	position: absolute;
-	content: url(images/svg/checkbox-check.svg);
-	left: 1.5px;
-	top: -1px;
-	opacity: 0;
-	transition: .2s;
-}
-
-input[type="checkbox"]:checked+.fake-checkbox::before {
-	opacity: 1;
+	&__image {
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		opacity: 0;
+	}
 }
 
 input[type="checkbox"]:checked+.fake-checkbox {
