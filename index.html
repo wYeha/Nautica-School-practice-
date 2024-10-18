@@ -274,13 +274,21 @@
 
 			<div class="form__button-box">
 				<div class="form__checkbox-box">
-					<input type="checkbox">
-					<label for="">Я принимаю <a href="">политику обработки персональных данных</a></label>
+					<label>
+						<input type="checkbox" id="agreementCheckbox">
+						<span class="fake-checkbox"></span>
+						<span class="form__input-text">Я принимаю <a class="form__politicy" href="#!">политику обработки
+								персональных
+								данных</a></span>
+					</label>
+
 				</div>
+				<button id="submitForm" class="form__button" disabled>Отправить форму</button>
 			</div>
 		</form>
 	</section>
 
+	<script src="script.js"></script>
 </body>
 
 </html>

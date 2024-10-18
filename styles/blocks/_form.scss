@@ -2,6 +2,7 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: $content-gap-large;
+	margin-bottom: $block-margin-desktop;
 
 	& input[type="text"],
 	& input[type="tel"],
@@ -52,13 +53,29 @@
 		justify-content: space-between;
 	}
 
-	&__checkbox-box {}
+	&__checkbox-box {
+		@include caption-hint-desktop;
+
+		& label {
+			display: flex;
+			align-items: flex-start;
+			gap: 6px;
+		}
+	}
+
+	&__input-text {
+		opacity: 0.3;
+		max-width: 300px;
+	}
 
 	&__button {
 		@include button-desktop;
 	}
+
+	&__politicy {
+		text-decoration: underline;
+		@include caption-hint-desktop;
+	}
 }
 
-.center {}
-
-.text-accent {}
+// стили для чекбокса в _globals.scss по поиску "стили для чекбокса"

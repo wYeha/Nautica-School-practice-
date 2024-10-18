@@ -362,6 +362,48 @@ img {
   color: #7E7E7E;
 }
 
+input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.fake-checkbox {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid #C2DEF0;
+  position: relative;
+}
+
+.fake-checkbox::before {
+  position: absolute;
+  content: url(/images/svg/checkbox-check.svg);
+  left: 1.5px;
+  top: -1px;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+input[type=checkbox]:checked + .fake-checkbox::before {
+  opacity: 1;
+}
+
+input[type=checkbox]:checked + .fake-checkbox {
+  border: 1px solid #2892D7;
+}
+
+input[type=checkbox]:focus + .fake-checkbox {
+  border: 1px solid #2892D7;
+  box-shadow: 0 0 0 3px #C2DEF0;
+}
+
+input[type=checkbox]:hover + .fake-checkbox {
+  border: 1px solid #2892D7;
+}
+
 .header__inner {
   padding: 20px 0 10px 0;
   max-width: 1170px;
@@ -728,6 +770,7 @@ img {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+  margin-bottom: 150px;
 }
 .form input[type=text], .form input[type=tel], .form input[type=email] {
   padding: 13px 14px;
@@ -786,6 +829,21 @@ img {
   display: flex;
   justify-content: space-between;
 }
+.form__checkbox-box {
+  font-family: "Noto Sans";
+  font-weight: 400;
+  font-size: 13px;
+  color: #373F51;
+}
+.form__checkbox-box label {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+.form__input-text {
+  opacity: 0.3;
+  max-width: 300px;
+}
 .form__button {
   background-color: #D00000;
   color: #FBFBFB;
@@ -810,4 +868,11 @@ img {
 .form__button:disabled {
   background-color: #D9D9D9;
   color: #7E7E7E;
+}
+.form__politicy {
+  text-decoration: underline;
+  font-family: "Noto Sans";
+  font-weight: 400;
+  font-size: 13px;
+  color: #373F51;
 }/*# sourceMappingURL=style.css.map */

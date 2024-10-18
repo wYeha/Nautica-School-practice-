@@ -181,3 +181,47 @@ img {
 		@include button-desktop;
 	}
 }
+
+// стили для чекбокса
+
+input[type="checkbox"] {
+	position: absolute;
+	opacity: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.fake-checkbox {
+	display: block;
+	width: 16px;
+	height: 16px;
+	border-radius: 4px;
+	border: 1px solid $color-blue-100;
+	position: relative;
+}
+
+.fake-checkbox::before {
+	position: absolute;
+	content: url(/images/svg/checkbox-check.svg);
+	left: 1.5px;
+	top: -1px;
+	opacity: 0;
+	transition: .2s;
+}
+
+input[type="checkbox"]:checked+.fake-checkbox::before {
+	opacity: 1;
+}
+
+input[type="checkbox"]:checked+.fake-checkbox {
+	border: 1px solid $color-blue-500;
+}
+
+input[type="checkbox"]:focus+.fake-checkbox {
+	border: 1px solid $color-blue-500;
+	box-shadow: 0 0 0 3px $color-blue-100;
+}
+
+input[type="checkbox"]:hover+.fake-checkbox {
+	border: 1px solid $color-blue-500;
+}
