@@ -40,6 +40,9 @@
 	box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
 	@include category-card-desktop;
 
+	&::placeholder{
+		opacity: 0.3;
+	}
 
 	&:focus {
 		outline: none;
@@ -221,7 +224,7 @@
 
 //body 
 
-@mixin p-desktop {
+@mixin text-desktop {
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 138%;
@@ -266,7 +269,7 @@
 	color: $color-dark-blue;
 }
 
-@mixin caption-label-desctop {
+@mixin caption-label-desktop {
 	font-family: 'Noto Sans';
 	font-weight: 500;
 	font-size: 14px;

@@ -1,0 +1,52 @@
+.contacts {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+
+	&__content {
+		padding: $content-gap-large;
+		background: $color-white;
+		border-radius: $border-radius;
+	}
+
+	&__title {
+		@include h6-desktop;
+		padding-bottom: 13px;
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		gap: 18px;
+	}
+
+	&__info-box {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+	}
+
+	&__info-small {
+		@include caption-label-desktop;
+		opacity: 0.6;
+	}
+
+	&__info-large {
+		@include text-desktop;
+		max-width: 240px;
+	}
+
+	&__button {
+		@include button-desktop;
+		margin-top: 27px;
+	}
+
+	&__map {
+		grid-column: 2 / span 2;
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+		border: 1px solid $color-blue-100;
+		border-radius: $border-radius;
+	}
+}

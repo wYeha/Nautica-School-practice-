@@ -780,6 +780,12 @@ input[type=checkbox]:hover + .fake-checkbox {
   line-height: 130%;
   color: #2B2B2B;
 }
+.form input[type=text]::-moz-placeholder, .form input[type=tel]::-moz-placeholder, .form input[type=email]::-moz-placeholder {
+  opacity: 0.3;
+}
+.form input[type=text]::placeholder, .form input[type=tel]::placeholder, .form input[type=email]::placeholder {
+  opacity: 0.3;
+}
 .form input[type=text]:focus, .form input[type=tel]:focus, .form input[type=email]:focus {
   outline: none;
   box-shadow: inset 0 0 0 3px #C2DEF0;
@@ -870,4 +876,78 @@ input[type=checkbox]:hover + .fake-checkbox {
   font-weight: 400;
   font-size: 13px;
   color: #373F51;
+}
+
+.contacts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.contacts__content {
+  padding: 30px;
+  background: #FBFBFB;
+  border-radius: 7px;
+}
+.contacts__title {
+  font-size: 24px;
+  line-height: 120%;
+  padding-bottom: 13px;
+}
+.contacts__info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.contacts__info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.contacts__info-small {
+  font-family: "Noto Sans";
+  font-weight: 500;
+  font-size: 14px;
+  color: #2B2B2B;
+  opacity: 0.6;
+}
+.contacts__info-large {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 138%;
+  color: #373F51;
+  max-width: 240px;
+}
+.contacts__button {
+  background-color: #D00000;
+  color: #FBFBFB;
+  border: none;
+  border-radius: 7px;
+  font-family: "Noto Sans";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  padding: 16px 26px;
+  margin-top: 27px;
+}
+.contacts__button:hover {
+  background-color: #FB2525;
+}
+.contacts__button:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px #FFB6B6;
+}
+.contacts__button:active {
+  background-color: #A61010;
+}
+.contacts__button:disabled {
+  background-color: #D9D9D9;
+  color: #7E7E7E;
+}
+.contacts__map {
+  grid-column: 2/span 2;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 1px solid #C2DEF0;
+  border-radius: 7px;
 }/*# sourceMappingURL=style.css.map */

@@ -17,7 +17,7 @@
 
 	&__slogan {
 		width: 236px;
-		@include p-desktop;
+		@include text-desktop;
 	}
 
 	&__image-box {
