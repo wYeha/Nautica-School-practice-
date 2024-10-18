@@ -380,7 +380,7 @@ input[type=checkbox] {
 
 .fake-checkbox::before {
   position: absolute;
-  content: url(/images/svg/checkbox-check.svg);
+  content: url(images/svg/checkbox-check.svg);
   left: 1.5px;
   top: -1px;
   opacity: 0;
