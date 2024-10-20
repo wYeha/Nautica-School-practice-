@@ -25,19 +25,19 @@
 			<nav class="header__nav">
 				<ul class="header__ul">
 					<li class="header__li">
-						<a href="" class="header__a">Услуги</a>
+						<a href="#services" class="header__a link-effects">Услуги</a>
 					</li>
 					<li class="header__li">
-						<a href="" class="header__a">Сертификаты</a>
+						<a href="#certificates" class="header__a link-effects">Сертификаты</a>
 					</li>
 					<li class="header__li">
-						<a href="" class="header__a">О нас</a>
+						<a href="#about" class="header__a link-effects">О нас</a>
 					</li>
 					<li class="header__li">
-						<a href="" class="header__a">Погода</a>
+						<a href="#weather" class="header__a link-effects">Погода</a>
 					</li>
 					<li class="header__li">
-						<a href="" class="header__a">Контакты</a>
+						<a href="#contacts" class="header__a link-effects">Контакты</a>
 					</li>
 				</ul>
 			</nav>
@@ -56,7 +56,7 @@
 		<button class="intro__signup">Записаться на тренировку</button>
 	</section>
 
-	<section class="description-block center">
+	<section class="description-block center" id="about">
 		<h2 class="description-block__title">
 			<span class="description-block__line">От крепкой любви к морю</span>
 			<span class="description-block__line text-accent">к открытию парусной школы</span>
@@ -75,7 +75,7 @@
 		</div>
 	</section>
 
-	<div class="services__container center">
+	<div class="services__container center" id="services">
 		<section class="services">
 			<h3 class="services__title">
 				<span class="text-accent">Форматы</span> приключений
@@ -162,7 +162,7 @@
 		</div>
 	</section>
 
-	<section class="weather center">
+	<section class="weather center" id="weather">
 		<h3 class="weather__title visually-hidden">Разнообразие яхт</h3>
 		<img class="weather__image" src="images/weather-image.jpg" alt="Яхты">
 
@@ -229,7 +229,7 @@
 
 	</section>
 
-	<section class="description-block center">
+	<section class="description-block center" id="certificates">
 		<h2 class="description-block__title">
 			<span class="description-block__line text-accent">добавьте ярких красок</span>
 			<span class="description-block__line">в свою жизнь и жизнь близких</span>
@@ -244,7 +244,7 @@
 					в&nbsp;парусах, окунуться в&nbsp;мир ярких
 					морских приключений и&nbsp;создать незабываемые воспоминания на&nbsp;долгие годы.</p>
 			</div>
-			<button class="description-block__more">Узнать подробнее</button>
+			<button class="description-block__more">Оформить сертификат</button>
 		</div>
 	</section>
 
@@ -290,7 +290,7 @@
 		</form>
 	</section>
 
-	<section class="contacts center">
+	<section class="contacts center" id="contacts">
 		<h3 class="visually-hidden">Контакты</h3>
 		<article class="contacts__content">
 			<h6 class="contacts__title">Свяжитесь с нами</h6>
@@ -315,6 +315,92 @@
 			frameborder="0">
 		</iframe>
 	</section>
+
+	<footer class="footer center">
+		<div class="footer__container">
+			<a href="index.html" class="logo_bottom logo">
+				<div class="logo__container">
+					<img class="logo__image" src="images/svg/logo-arrow.svg" alt="compass" loading="lazy">
+				</div>
+				<span class="logo__text">
+					яхт-школа Наутика
+				</span>
+			</a>
+
+			<article class="footer__content">
+				<nav class="footer__nav">
+					<h6 class="footer__h6">Навигация</h6>
+					<ul class="footer__nav-list">
+						<li class="footer__nav-element">
+							<a class="link-effects" href="#services">
+								Услуги
+							</a>
+						</li>
+						<li class="footer__nav-element">
+							<a class="link-effects" href="#certificates">
+								Сертификаты
+							</a>
+						</li>
+						<li class="footer__nav-element">
+							<a class="link-effects" href="#about">
+								О нас
+							</a>
+						</li>
+						<li class="footer__nav-element">
+							<a class="link-effects" href="#weather">
+								Погода
+							</a>
+						</li>
+						<li class="footer__nav-element">
+							<a class="link-effects" href="#contacts">
+								Контакты
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</article>
+
+			<article class="footer__content">
+				<h6 class="footer__h6">Адрес</h6>
+				<p class="footer__adress-box">
+					<span class="footer__adress">
+						г.Новосибирск
+						ул.Бердский тупик 9/1
+					</span>
+					<span class="footer__adress">Пляж &laquo;Звезда&raquo;</span>
+					<span class="footer__adress">Яхт-клуб &laquo;Наука&raquo;</span>
+				</p>
+			</article>
+			<article class="footer__content footer__socials-block">
+				<h6 class="footer__h6">Контакты</h6>
+				<a href="tel:+78694684868" class="phone-number phone-number-bottom link-effects">+ 7 869 468 48 68</a>
+				<a href="mailto:nautica@mail.ru" class="link-effects">nautica@mail.ru</a>
+				<ul class="footer__socials-list">
+					<li class="footer__socials-item">
+						<a href="">
+							<img src="images/svg/tg-image.svg" alt="Телеграм">
+						</a>
+					</li>
+					<li class="footer__socials-item">
+						<a href="">
+							<img src="images/svg/whatsup-image.svg" alt="Ватсап">
+						</a>
+					</li>
+					<li class="footer__socials-item">
+						<a href="">
+							<img src="images/svg/vk-image.svg" alt="ВКонтакте">
+						</a>
+					</li>
+					<li class="footer__socials-item">
+						<a href="">
+							<img src="images/svg/insta-image.svg" alt="Инстаграм">
+						</a>
+					</li>
+				</ul>
+			</article>
+		</div>
+		<a class="footer__politicy" href="#!">Политика конфиденциальности</a>
+	</footer>
 
 	<script src="script.js"></script>
 </body>

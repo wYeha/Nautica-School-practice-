@@ -40,7 +40,7 @@
 	box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
 	@include category-card-desktop;
 
-	&::placeholder{
+	&::placeholder {
 		opacity: 0.3;
 	}
 
@@ -225,6 +225,7 @@
 //body 
 
 @mixin text-desktop {
+	font-family: 'Noto Sans';
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 138%;

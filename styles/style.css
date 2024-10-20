@@ -399,6 +399,18 @@ input[type=checkbox]:hover + .fake-checkbox {
   border: 1px solid #2892D7;
 }
 
+.link-effects:hover {
+  color: #3BA9F2;
+}
+.link-effects:focus {
+  box-shadow: 0 0 0 3px #C2DEF0;
+  background: #EAF4FB;
+  outline: none;
+}
+.link-effects:active {
+  color: #136BA5;
+}
+
 .header__inner {
   padding: 20px 0 10px 0;
   max-width: 1170px;
@@ -443,6 +455,7 @@ input[type=checkbox]:hover + .fake-checkbox {
 }
 .intro__slogan {
   width: 236px;
+  font-family: "Noto Sans";
   font-weight: 400;
   font-size: 18px;
   line-height: 138%;
@@ -621,6 +634,7 @@ input[type=checkbox]:hover + .fake-checkbox {
   gap: 70px;
 }
 .advantages__statistics-text {
+  font-family: "Noto Sans";
   font-weight: 400;
   font-size: 18px;
   line-height: 138%;
@@ -882,6 +896,7 @@ input[type=checkbox]:hover + .fake-checkbox {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  margin-bottom: 150px;
 }
 .contacts__content {
   padding: 30px;
@@ -911,6 +926,7 @@ input[type=checkbox]:hover + .fake-checkbox {
   opacity: 0.6;
 }
 .contacts__info-large {
+  font-family: "Noto Sans";
   font-weight: 400;
   font-size: 18px;
   line-height: 138%;
@@ -950,4 +966,70 @@ input[type=checkbox]:hover + .fake-checkbox {
   box-sizing: border-box;
   border: 1px solid #C2DEF0;
   border-radius: 7px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(0, 0, 0, 0.16);
+  padding-top: 30px;
+}
+.footer__content a {
+  font-family: "Noto Sans";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 138%;
+  color: #373F51;
+}
+.footer__h6 {
+  font-size: 13px;
+  color: #2B2B2B;
+  padding-bottom: 12px;
+}
+.footer__nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.footer__adress-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-width: 193px;
+}
+.footer__adress {
+  font-family: "Noto Sans";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 138%;
+  color: #373F51;
+}
+.footer__socials-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.footer__socials-list {
+  padding-top: 6px;
+  display: flex;
+  gap: 9px;
+}
+.footer__politicy {
+  align-self: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  font-family: "Noto Sans";
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: underline;
+  color: #2B2B2B;
+  opacity: 0.6;
+}
+
+.logo_bottom {
+  align-self: flex-start;
 }/*# sourceMappingURL=style.css.map */

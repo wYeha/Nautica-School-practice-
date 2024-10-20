@@ -223,3 +223,19 @@ input[type="checkbox"]:focus+.fake-checkbox {
 input[type="checkbox"]:hover+.fake-checkbox {
 	border: 1px solid $color-blue-500;
 }
+
+.link-effects {
+	&:hover {
+		color: $color-blue-400;
+	}
+
+	&:focus {
+		box-shadow: 0 0 0 3px $color-blue-100;
+		background: $color-blue-50;
+		outline: none;
+	}
+
+	&:active{
+		color: $color-blue-600;
+	}
+}
