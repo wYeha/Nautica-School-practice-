@@ -46,7 +46,8 @@
 		&_desktop,
 		&_laptop,
 		&_tablet-portrait,
-		&_phone-landscape {
+		&_phone-landscape,
+		&_phone {
 			position: absolute;
 			z-index: 10;
 		}
@@ -159,6 +160,10 @@
 			left: 18px;
 		}
 
+		&__slogan {
+			@include text-phone;
+		}
+
 		&__image-box {
 
 			&_desktop,
@@ -179,14 +184,28 @@
 
 @media (max-width: 588px) {
 	.intro {
-		height: 309px;
-		gap: 15px;
+		display: flex;
+		height: 590px;
+
 
 		&__title {
-			@include h1-phone-landscape;
-			text-align: left;
-			top: 25px;
-			left: 18px;
+			@include h1-phone-portrait;
+			text-align: center;
+			width: 343px;
+			margin-left: auto;
+			margin-right: auto;
+			left: 0;
+			right: 0;
+			top: 195px;
+		}
+
+		&__sail {
+			&_phone {
+				top: 0;
+				transform: translateX(200px);
+
+
+			}
 		}
 
 		&__image-box {
@@ -199,13 +218,21 @@
 			}
 
 			&_phone {
+				order: 1;
 				display: block;
 				width: 100%;
 				height: 456px;
-				background-image: url("../images/intro-phone.jpg");
-				background-position: center;
-				background-size: cover;
+				background: center / cover no-repeat url("../images/intro-phone.jpg");
+				border-radius: $border-radius;
 			}
+		}
+
+		&__slogan {
+			order: 2;
+		}
+
+		&__signup {
+			order: 3;
 		}
 	}
 }
