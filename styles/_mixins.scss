@@ -1,19 +1,16 @@
-@mixin button-desktop {
+@mixin button-medium-design {
 	background-color: $color-red-500;
 	color: $color-white;
 	border: none;
 	border-radius: $border-radius;
-	font-family: 'Noto Sans';
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 143%;
-	padding: 16px 26px;
+	@include button-medium;
+	padding: $button-padding-desktop-y $button-padding-desktop-x;
 
 	&:hover {
 		background-color: $color-red-400;
 	}
 
-	&:focus {
+	&:focus-visible {
 		outline: none;
 		box-shadow: 0 0 0 5px $color-red-100;
 	}
@@ -27,6 +24,13 @@
 		color: $color-dark-grey;
 	}
 }
+
+@mixin button-small-design {
+	@include button-medium-design;
+	@include button-small;
+	padding: $button-padding-y $button-padding-x;
+}
+
 
 
 //input
@@ -232,6 +236,26 @@
 	color: $color-dark-blue;
 }
 
+@mixin text-laptop {
+	font-family: 'Noto Sans';
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 130%;
+	color: $color-dark-blue;
+}
+
+@mixin text-tablet {
+	font-family: 'Noto Sans';
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 130%;
+	color: $color-dark-blue;
+}
+
+@mixin text-phone {
+	@include text-tablet;
+}
+
 @mixin category-card-desktop {
 	font-family: 'Noto Sans';
 	font-weight: 400;
@@ -248,8 +272,16 @@
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 143%;
-	color: $color-dark-blue;
 }
+
+@mixin button-small {
+	font-family: 'Noto Sans';
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 138%;
+}
+
+
 
 
 // accent-numbers

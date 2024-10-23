@@ -178,7 +178,7 @@ img {
 	}
 
 	&__more {
-		@include button-desktop;
+		@include button-medium-design;
 	}
 }
 
@@ -235,7 +235,35 @@ input[type="checkbox"]:hover+.fake-checkbox {
 		outline: none;
 	}
 
-	&:active{
+	&:active {
 		color: $color-blue-600;
+	}
+}
+
+@media (max-width: $container-desktop) {
+	.center {
+		padding-left: calc(50% - $container-laptop / 2);
+		padding-right: calc(50% - $container-laptop / 2);
+	}
+}
+
+@media (max-width: $container-laptop) {
+	.center {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+}
+
+@media (max-width: 768px) {
+	.center {
+		padding-left: 18px;
+		padding-right: 18px;
+	}
+}
+
+@media (max-width: 375px) {
+	.center {
+		padding-left: 16px;
+		padding-right: 16px;
 	}
 }

@@ -10,9 +10,24 @@
 
 <body>
 
+	<style>
+		/* .header, */
+		/* .intro, */
+		.description-block,
+		.services__container,
+		.advantages,
+		.weather,
+		.description-block,
+		.form,
+		.contacts,
+		.footer {
+			display: none;
+		}
+	</style>
+
 	<header class="header center">
 		<div class="header__inner container-desktop">
-			<a href="index.html" class="logo_top logo">
+			<a href="index.html" class="header__logo logo">
 				<div class="logo__container">
 					<img class="logo__image" src="images/svg/logo-arrow.svg" alt="compass" loading="lazy">
 				</div>
@@ -42,17 +57,45 @@
 				</ul>
 			</nav>
 
-			<a class="phone-number phone-number_top" href="tel:+78694684868">+ 7 869 468 48 68</a>
+			<input type="checkbox" id="burger" checked>
+			<label class="burger" for="burger">
+				<div class="burger-box">
+					<div class="burger-1"></div>
+					<div class="burger-2"></div>
+					<div class="burger-3"></div>
+				</div>
+			</label>
+			<a class="phone-number phone-number_top link-effects" href="tel:+78694684868">+ 7 869 468 48 68</a>
 		</div>
 	</header>
 
 	<section class="intro center">
 		<p class="intro__slogan">Первые шаги к серьезному парусному&nbsp;спорту.</p>
-		<h1 class="intro__title center">откройте для себя парусный спорт</h1>
-		<div class="intro__image-box">
+		<h1 class="intro__title">откройте для себя парусный спорт</h1>
+
+		<div class="intro__image-box_desktop">
 			<img class="intro__image" src="images/intro-desktop.jpg" alt="Фон с парусником">
-			<img class="intro__sail" src="images/sail-desktop.png" alt="Парус поверх текста">
+			<img class="intro__sail_desktop" src="images/sail-desktop.png" alt="Парус поверх текста">
 		</div>
+
+		<div class="intro__image-box_laptop">
+			<img class="intro__image" width="462" height="594" src="images/intro-laptop.jpg" alt="Фон с парусником">
+			<img class="intro__sail_laptop" src="images/sail-laptop.png" alt="Парус поверх текста">
+		</div>
+
+		<div class="intro__image-box_tablet-portrait">
+			<img class="intro__image" src="images/intro-tablet-portrait.jpg" alt="Фон с парусником">
+			<img class="intro__sail_tablet-portrait" src="images/sail-tablet-portrait.png" alt="Парус поверх текста">
+		</div>
+
+		<div class="intro__image-box_phone-landscape">
+			<img class="intro__image" src="images/intro-phone-landscape.jpg" alt="Фон с парусником">
+			<img class="intro__sail_phone-landscape" src="images/sail-phone-landscape.png" alt="Парус поверх текста">
+		</div>
+
+		<div class="intro__image-box_phone">
+		</div>
+
 		<button class="intro__signup">Записаться на тренировку</button>
 	</section>
 
