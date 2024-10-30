@@ -6,13 +6,9 @@
 	max-width: $container-laptop;
 }
 
-.container-100 {
-	max-width: $container-100;
-}
-
 .center {
-	padding-left: calc(50% - $container-desktop / 2);
-	padding-right: calc(50% - $container-desktop / 2);
+	margin-left: calc(50% - $container-desktop / 2);
+	margin-right: calc(50% - $container-desktop / 2);
 }
 
 body {
@@ -153,19 +149,19 @@ img {
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
-		height: 88px;
 	}
 
 	&__info {
 		display: flex;
-		gap: 30px;
+		gap: $content-gap-large;
+		@include text-desktop;
 	}
 
 	&__info-1 {
 		width: 270px;
 
 		&_certificates {
-			width: 330px;
+			width: 370px;
 		}
 	}
 
@@ -181,6 +177,145 @@ img {
 		@include button-medium-design;
 	}
 }
+
+//laptop-media
+@media (max-width: $container-desktop) {
+	.description-block {
+		margin-bottom: $block-margin-laptop;
+
+		&__title {
+			@include h2-laptop;
+			text-indent: 247px;
+			margin-bottom: 70px;
+		}
+
+		&__info {
+			@include text-laptop;
+		}
+
+		&__info-1 {
+			width: 216px;
+
+			&_certificates {
+				width: 350px;
+			}
+		}
+
+		&__info-2 {
+			width: 483px;
+
+			&_certificates {
+				width: 350px;
+			}
+		}
+
+		&__more {
+			@include button-small-design;
+		}
+	}
+}
+
+// tablet-media
+@media (max-width: $container-laptop) {
+	.description-block {
+		margin-bottom: $block-margin-tablet;
+
+		&__title {
+			@include h2-tablet;
+			text-indent: 0;
+			margin-bottom: 60px;
+		}
+
+		&__info {
+			@include text-tablet;
+			gap: $content-gap-medium;
+		}
+
+		&__info-1 {
+			width: 162px;
+
+			&_certificates {
+				width: 251px;
+			}
+		}
+
+		&__info-2 {
+			width: 348px;
+
+			&_certificates {
+				width: 251px;
+			}
+		}
+	}
+}
+
+// phone-horizontal-media
+@media (max-width: $container-tablet-portrait) {
+	.description-block {
+
+		&__title {
+			@include h2-phone-landscape;
+			margin-bottom: 40px;
+		}
+
+		&__info-container {
+			flex-wrap: wrap
+		}
+
+		&__info {
+			margin-bottom: 30px;
+			@include text-phone;
+		}
+
+		&__info-1 {
+			width: 213px;
+
+			&_certificates {
+				width: 297px;
+			}
+		}
+
+		&__info-2 {
+			width: 381px;
+
+			&_certificates {
+				width: 297px;
+			}
+		}
+	}
+}
+
+// phone-media
+@media (max-width: $container-phone-landscape) {
+	.description-block {
+
+		&__title {
+			@include h2-phone-portrait;
+			width: 100%;
+		}
+
+		&__info-container {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		&__info {
+			flex-direction: column;
+			gap: 16px;
+			@include text-phone;
+		}
+
+		&__info-1,
+		&__info-2 {
+			width: 100%;
+
+			&_certificates {
+				width: 100%;
+			}
+		}
+	}
+}
+
 
 // стили для чекбокса
 
@@ -242,28 +377,28 @@ input[type="checkbox"]:hover+.fake-checkbox {
 
 @media (max-width: $container-desktop) {
 	.center {
-		padding-left: calc(50% - $container-laptop / 2);
-		padding-right: calc(50% - $container-laptop / 2);
+		margin-left: calc(50% - $container-laptop / 2);
+		margin-right: calc(50% - $container-laptop / 2);
 	}
 }
 
 @media (max-width: $container-laptop) {
 	.center {
-		padding-left: 24px;
-		padding-right: 24px;
+		margin-left: calc(50% - $container-tablet-portrait / 2);
+		margin-right: calc(50% - $container-tablet-portrait / 2);
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: $container-tablet-portrait) {
 	.center {
-		padding-left: 18px;
-		padding-right: 18px;
+		margin-left: calc(50% - $container-phone-landscape / 2);
+		margin-right: calc(50% - $container-phone-landscape / 2);
 	}
 }
 
-@media (max-width: 588px) {
+@media (max-width: $container-phone-landscape) {
 	.center {
-		padding-left: 16px;
-		padding-right: 16px;
+		margin-left: 16px;
+		margin-right: 16px;
 	}
 }

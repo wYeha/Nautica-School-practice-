@@ -75,7 +75,7 @@
 	transform: translateY(-300%) rotate(-45deg);
 }
 
-@media (max-width: 768px) {
+@media (max-width: $container-tablet-portrait) {
 	.burger {
 		display: block;
 	}
@@ -88,7 +88,7 @@
 	.header {
 
 		&__inner {
-			padding: 10px 0 0 0;
+			padding: 10px 0;
 		}
 	}
 }

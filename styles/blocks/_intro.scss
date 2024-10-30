@@ -10,6 +10,7 @@
 		position: absolute;
 		top: 143px;
 		left: calc(50% - $container-desktop / 2);
+		right: calc(50% - $container-desktop / 2);
 		text-align: center;
 		z-index: 1;
 		line-height: 1;
@@ -17,7 +18,7 @@
 	}
 
 	&__slogan {
-		width: 236px;
+		width: 231px;
 		@include text-desktop;
 	}
 
@@ -26,13 +27,15 @@
 		&_desktop,
 		&_laptop,
 		&_tablet-portrait,
-		&_phone-landscape {
+		&_phone-landscape,
+		&_phone {
 			position: relative;
 		}
 
 		&_laptop,
 		&_tablet-portrait,
-		&_phone-landscape {
+		&_phone-landscape,
+		&_phone {
 			display: none;
 		}
 	}
@@ -84,7 +87,8 @@
 
 		&__title {
 			@include h1-laptop;
-			left: 0;
+			left: calc(50% - $container-laptop / 2);
+			right: calc(50% - $container-laptop / 2);
 		}
 
 		&__slogan {
@@ -123,7 +127,9 @@
 			@include h1-tablet;
 			text-align: left;
 			top: 85px;
-			left: 24px;
+			max-width: $container-tablet-portrait;
+			left: calc(50% - $container-tablet-portrait / 2);
+			right: calc(50% - $container-tablet-portrait / 2);
 		}
 
 		&__slogan {
@@ -142,13 +148,13 @@
 			&_tablet-portrait {
 				display: block;
 				position: absolute;
-				right: 24px;
+				right: 0;
 			}
 		}
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: $container-tablet-portrait) {
 	.intro {
 		height: 309px;
 		gap: 15px;
@@ -157,7 +163,9 @@
 			@include h1-phone-landscape;
 			text-align: left;
 			top: 25px;
-			left: 18px;
+			max-width: $container-phone-landscape;
+			left: calc(50% - $container-phone-landscape / 2);
+			right: calc(50% - $container-phone-landscape / 2);
 		}
 
 		&__slogan {
@@ -176,17 +184,20 @@
 			&_phone-landscape {
 				display: block;
 				position: absolute;
-				right: 18px;
+				right: 0;
 			}
 		}
 	}
 }
 
-@media (max-width: 588px) {
+@media (max-width: $container-phone-landscape) {
 	.intro {
 		display: flex;
-		height: 590px;
-
+		height: 600px;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 0;
+		margin-bottom: $block-margin-mobile;
 
 		&__title {
 			@include h1-phone-portrait;
@@ -196,15 +207,16 @@
 			margin-right: auto;
 			left: 0;
 			right: 0;
-			top: 195px;
+			top: 170px;
 		}
 
 		&__sail {
 			&_phone {
-				top: 0;
-				transform: translateX(200px);
-
-
+				top: 159px;
+				margin-left: auto;
+				margin-right: auto;
+				left: 0;
+				right: 0;
 			}
 		}
 
@@ -228,7 +240,10 @@
 		}
 
 		&__slogan {
+			margin-top: 20px;
+			margin-bottom: 40px;
 			order: 2;
+			text-align: center;
 		}
 
 		&__signup {

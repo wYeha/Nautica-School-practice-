@@ -55,7 +55,7 @@
 		visibility: hidden;
 
 		&_text {
-			@include button-medium-design;
+			@include button-medium;
 			color: $color-white;
 		}
 
