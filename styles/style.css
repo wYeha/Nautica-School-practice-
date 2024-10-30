@@ -911,9 +911,11 @@ input[type=checkbox]:hover + .fake-checkbox {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 570px;
 }
 .services__container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
   margin-bottom: 150px;
 }
@@ -924,13 +926,12 @@ input[type=checkbox]:hover + .fake-checkbox {
 }
 .services__grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(216px, 1fr));
-  grid-template-rows: repeat(2, minmax(130px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
 .services__category {
   background-color: #FBFBFB;
-  padding: 16px 16px 71px;
+  padding: 15px 15px 71px;
   border-radius: 7px;
   position: relative;
   overflow: hidden;
@@ -939,7 +940,7 @@ input[type=checkbox]:hover + .fake-checkbox {
 .services__h6 {
   font-size: 24px;
   line-height: 120%;
-  padding-bottom: 6px;
+  padding-bottom: 12px;
 }
 .services__text {
   font-family: "Noto Sans";
@@ -950,9 +951,7 @@ input[type=checkbox]:hover + .fake-checkbox {
 }
 .services__image {
   border-radius: 7px;
-  width: 570px;
-  height: 570px;
-  pointer-events: none;
+  background: center/cover no-repeat url("../images/services-image.jpg");
 }
 .services__more {
   display: flex;
@@ -970,6 +969,10 @@ input[type=checkbox]:hover + .fake-checkbox {
   line-height: 143%;
   color: #FBFBFB;
 }
+.services__more_arrow path {
+  fill: #FBFBFB;
+}
+
 .services__category:hover {
   background-color: #2892D7;
 }
@@ -988,6 +991,116 @@ input[type=checkbox]:hover + .fake-checkbox {
   color: #FBFBFB;
 }
 
+@media (max-width: 1170px) {
+  .services {
+    height: 462px;
+  }
+  .services__container {
+    margin-bottom: 130px;
+  }
+  .services__title {
+    font-size: 26px;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
+  .services__category {
+    padding: 14px 14px 56px;
+  }
+  .services__h6 {
+    font-size: 20px;
+    line-height: 120%;
+    padding-bottom: 10px;
+  }
+  .services__text {
+    font-family: "Noto Sans";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    color: #2B2B2B;
+  }
+}
+@media (max-width: 954px) {
+  .services {
+    height: 302px;
+  }
+  .services__container {
+    gap: 24px;
+    margin-bottom: 110px;
+  }
+  .services__title {
+    font-size: 20px;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
+  .services__grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .services__category {
+    padding: 0;
+  }
+  .services__h6 {
+    font-size: 16px;
+    line-height: 120%;
+    padding: 0;
+    padding-left: 14px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .services__text {
+    display: none;
+  }
+  .services__more {
+    padding-right: 14px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    visibility: visible;
+    width: 100%;
+    justify-content: right;
+  }
+  .services__more_text {
+    display: none;
+  }
+  .services__more_arrow path {
+    fill: #2892D7;
+  }
+}
+@media (max-width: 720px) {
+  .services {
+    height: 267px;
+  }
+  .services__title {
+    font-size: 15px;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
+  .services__grid {
+    gap: 8px;
+  }
+  .services__h6 {
+    font-size: 15px;
+    line-height: 120%;
+  }
+}
+@media (max-width: 610px) {
+  .services {
+    height: 429px;
+  }
+  .services__container {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 90px;
+    position: relative;
+  }
+  .services__image {
+    height: 170px;
+    width: 100%;
+    top: 24px;
+    position: absolute;
+  }
+}
 .advantages {
   display: flex;
   justify-content: space-between;

@@ -2,9 +2,11 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	height: 570px;
 
 	&__container {
-		display: flex;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 		gap: $content-gap-large;
 		margin-bottom: $block-margin-desktop;
 	}
@@ -15,14 +17,13 @@
 
 	&__grid {
 		display: grid;
-		grid-template-columns: repeat(2, minmax(216px, 1fr));
-		grid-template-rows: repeat(2, minmax(130px, 1fr));
+		grid-template-columns: 1fr 1fr;
 		gap: $content-gap-large;
 	}
 
 	&__category {
 		background-color: $color-white;
-		padding: 16px 16px 71px;
+		padding: 15px 15px 71px;
 		border-radius: $border-radius;
 		position: relative;
 		overflow: hidden;
@@ -31,7 +32,7 @@
 
 	&__h6 {
 		@include h6-desktop;
-		padding-bottom: 6px;
+		padding-bottom: 12px;
 	}
 
 	&__text {
@@ -40,9 +41,7 @@
 
 	&__image {
 		border-radius: $border-radius;
-		width: 570px;
-		height: 570px;
-		pointer-events: none;
+		background: center / cover no-repeat url("../images/services-image.jpg");
 	}
 
 	&__more {
@@ -57,9 +56,12 @@
 		&_text {
 			@include button-medium;
 			color: $color-white;
+
 		}
 
-		&_arrow {}
+		&_arrow path {
+			fill: $color-white;
+		}
 	}
 }
 
@@ -79,4 +81,131 @@
 
 .services__category:hover .services__text {
 	color: $color-white;
+}
+
+
+//media laptop
+@media (max-width: $container-desktop) {
+	.services {
+		height: 462px;
+
+		&__container {
+			margin-bottom: $block-margin-laptop;
+		}
+
+		&__title {
+			@include h3-laptop;
+		}
+
+		&__grid {}
+
+		&__category {
+			padding: 14px 14px 56px;
+		}
+
+		&__h6 {
+			@include h6-laptop;
+			padding-bottom: 10px;
+		}
+
+		&__text {
+			@include category-card-laptop;
+		}
+	}
+}
+
+//media tablet-portrait
+@media (max-width: $container-laptop) {
+	.services {
+		height: 302px;
+
+		&__container {
+			gap: $content-gap-medium;
+			margin-bottom: $block-margin-tablet;
+		}
+
+		&__title {
+			@include h3-tablet;
+		}
+
+		&__grid {
+			grid-template-columns: 1fr;
+			gap: 12px;
+		}
+
+		&__category {
+			padding: 0;
+		}
+
+		&__h6 {
+			@include h6-tablet;
+			padding: 0;
+			padding-left: 14px;
+			padding-top: 16px;
+			padding-bottom: 16px;
+		}
+
+		&__text {
+			display: none;
+		}
+
+		&__more {
+			padding-right: 14px;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 0;
+			visibility: visible;
+			width: 100%;
+			justify-content: right;
+
+			&_text {
+				display: none;
+			}
+
+			&_arrow path {
+				fill: $color-blue-500;
+			}
+		}
+	}
+}
+
+//media phone-landscape
+@media (max-width: $container-tablet-portrait) {
+	.services {
+		height: 267px;
+
+		&__title {
+			@include h3-phone-landscape;
+		}
+
+		&__grid {
+			gap: 8px;
+		}
+
+		&__h6 {
+			@include h6-phone-landscape;
+		}
+	}
+}
+
+//media phone-landscape
+@media (max-width: $container-phone-landscape) {
+	.services {
+		height: 429px;
+
+		&__container {
+			display: flex;
+			flex-direction: column-reverse;
+			margin-bottom: $block-margin-mobile;
+			position: relative;
+		}
+
+		&__image {
+			height: 170px;
+			width: 100%;
+			top: 24px;
+			position: absolute;
+		}
+	}
 }
