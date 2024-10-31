@@ -305,12 +305,33 @@
 	color: $color-dark-blue;
 }
 
+@mixin accent-numbers-tablet {
+	font-family: 'Bebas Neue';
+	font-weight: 700;
+	font-size: 44px;
+	color: $color-dark-blue;
+}
+
+@mixin accent-numbers-phone {
+	font-family: 'Bebas Neue';
+	font-weight: 700;
+	font-size: 38px;
+	color: $color-dark-blue;
+}
+
 // caption
 
 @mixin caption-hint-desktop {
 	font-family: 'Noto Sans';
 	font-weight: 400;
 	font-size: 13px;
+	color: $color-dark-blue;
+}
+
+@mixin caption-hint-tablet {
+	font-family: 'Noto Sans';
+	font-weight: 400;
+	font-size: 12px;
 	color: $color-dark-blue;
 }
 

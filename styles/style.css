@@ -1162,8 +1162,7 @@ input[type=checkbox]:hover + .fake-checkbox {
 }
 .advantages__grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(140px, 270px));
-  grid-template-rows: repeat(2, minmax(77px, 51px));
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
 .advantages__element {
@@ -1186,6 +1185,184 @@ input[type=checkbox]:hover + .fake-checkbox {
   color: #373F51;
 }
 
+@media (max-width: 1170px) {
+  .advantages {
+    margin-bottom: 130px;
+  }
+  .advantages__welcome-text {
+    font-size: 24px;
+  }
+  .advantages__button {
+    background-color: #D00000;
+    color: #FBFBFB;
+    border: none;
+    border-radius: 7px;
+    font-family: "Noto Sans";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    padding: 16px 26px;
+    font-family: "Noto Sans";
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 138%;
+    padding: 14px 24px;
+  }
+  .advantages__button:hover {
+    background-color: #FB2525;
+  }
+  .advantages__button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 5px #FFB6B6;
+  }
+  .advantages__button:active {
+    background-color: #A61010;
+  }
+  .advantages__button:disabled {
+    background-color: #D9D9D9;
+    color: #7E7E7E;
+  }
+  .advantages__statistics {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+  }
+  .advantages__statistics-text {
+    font-family: "Noto Sans";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #373F51;
+  }
+}
+@media (max-width: 954px) {
+  .advantages {
+    margin-bottom: 110px;
+    gap: 24px;
+  }
+  .advantages__welcome-text {
+    font-size: 18px;
+  }
+  .advantages__button {
+    background-color: #D00000;
+    color: #FBFBFB;
+    border: none;
+    border-radius: 7px;
+    font-family: "Noto Sans";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    padding: 16px 26px;
+    font-family: "Noto Sans";
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 138%;
+    padding: 14px 24px;
+  }
+  .advantages__button:hover {
+    background-color: #FB2525;
+  }
+  .advantages__button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 5px #FFB6B6;
+  }
+  .advantages__button:active {
+    background-color: #A61010;
+  }
+  .advantages__button:disabled {
+    background-color: #D9D9D9;
+    color: #7E7E7E;
+  }
+  .advantages__statistics {
+    gap: 60px;
+  }
+  .advantages__statistics-text {
+    font-family: "Noto Sans";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    color: #373F51;
+  }
+  .advantages__grid {
+    gap: 24px;
+  }
+  .advantages__number {
+    font-family: "Bebas Neue";
+    font-weight: 700;
+    font-size: 44px;
+    color: #373F51;
+  }
+  .advantages__number-text {
+    font-family: "Noto Sans";
+    font-weight: 400;
+    font-size: 12px;
+    color: #373F51;
+  }
+}
+@media (max-width: 720px) {
+  .advantages {
+    gap: 16px;
+  }
+  .advantages__welcome-text {
+    font-size: 15px;
+  }
+  .advantages__statistics {
+    gap: 40px;
+  }
+  .advantages__grid {
+    gap: 16px;
+  }
+  .advantages__number {
+    font-family: "Bebas Neue";
+    font-weight: 700;
+    font-size: 38px;
+    color: #373F51;
+  }
+  .advantages__number-text {
+    font-family: "Noto Sans";
+    font-weight: 400;
+    font-size: 12px;
+    color: #373F51;
+  }
+}
+@media (max-width: 610px) {
+  .advantages {
+    margin-bottom: 90px;
+    gap: 0;
+    flex-direction: column;
+    position: relative;
+  }
+  .advantages__welcome {
+    height: 285px;
+  }
+  .advantages__welcome-text {
+    font-size: 14px;
+  }
+  .advantages__statistics {
+    position: absolute;
+    top: 95px;
+    gap: 40px;
+  }
+  .advantages__statistics-text {
+    display: none;
+  }
+  .advantages__grid {
+    gap: 16px;
+  }
+  .advantages__number {
+    font-family: "Bebas Neue";
+    font-weight: 700;
+    font-size: 38px;
+    color: #373F51;
+  }
+  .advantages__number-text {
+    font-family: "Noto Sans";
+    font-weight: 400;
+    font-size: 12px;
+    color: #373F51;
+  }
+}
 .weather {
   display: flex;
   gap: 30px;
