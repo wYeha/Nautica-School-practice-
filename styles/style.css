@@ -523,7 +523,6 @@ input[type=checkbox] {
   border: 1px solid #C2DEF0;
   position: relative;
   padding: 2px;
-  box-sizing: border-box;
 }
 .fake-checkbox__image {
   -webkit-user-select: none;
@@ -1634,8 +1633,11 @@ input[type=checkbox]:hover + .fake-checkbox {
 .form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  grid-template-rows: auto 1fr;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
   margin-bottom: 150px;
+  height: 348px;
 }
 .form input[type=text], .form input[type=tel], .form input[type=email] {
   padding: 13px 14px;
@@ -1664,9 +1666,11 @@ input[type=checkbox]:hover + .fake-checkbox {
   font-size: 28px;
   line-height: 110%;
   text-transform: uppercase;
+  margin-bottom: 30px;
 }
 .form__image {
   border-radius: 7px;
+  background: center/cover no-repeat url("../images/form-image.jpg");
 }
 .form__form {
   grid-area: 1/2/span 2/2;
@@ -1698,6 +1702,7 @@ input[type=checkbox]:hover + .fake-checkbox {
 }
 .form__button-box {
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
 }
 .form__checkbox-box {
@@ -1748,6 +1753,138 @@ input[type=checkbox]:hover + .fake-checkbox {
   color: #373F51;
 }
 
+@media (max-width: 1170px) {
+  .form {
+    height: 342px;
+    margin-bottom: 130px;
+  }
+  .form__input-text {
+    max-width: unset;
+  }
+  .form__title {
+    margin-bottom: 28px;
+    font-size: 26px;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
+  .form__button {
+    background-color: #D00000;
+    color: #FBFBFB;
+    border: none;
+    border-radius: 7px;
+    font-family: "Noto Sans";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    padding: 16px 26px;
+    font-family: "Noto Sans";
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 138%;
+    padding: 14px 24px;
+    white-space: nowrap;
+  }
+  .form__button:hover {
+    background-color: #FB2525;
+  }
+  .form__button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 5px #FFB6B6;
+  }
+  .form__button:active {
+    background-color: #A61010;
+  }
+  .form__button:disabled {
+    background-color: #D9D9D9;
+    color: #7E7E7E;
+  }
+  .fake-checkbox {
+    width: 19px;
+  }
+}
+@media (max-width: 954px) {
+  .form {
+    height: 446px;
+    -moz-column-gap: 24px;
+         column-gap: 24px;
+    margin-bottom: 110px;
+  }
+  .form__checkbox-box label {
+    gap: 8px;
+  }
+  .form__button-box {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .form__label {
+    font-family: "Noto Sans";
+    font-weight: 500;
+    font-size: 13px;
+    color: #2B2B2B;
+  }
+  .form__input-text {
+    max-width: none;
+    margin-bottom: 20px;
+  }
+  .form__input-box {
+    row-gap: 16px;
+  }
+  .form__input-box div:nth-child(3), .form__input-box div:nth-child(4) {
+    grid-column: span 2;
+  }
+  .form__input {
+    gap: 5px;
+  }
+  .form input[type=text], .form input[type=tel], .form input[type=email] {
+    font-size: 13px;
+  }
+  .form__title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
+}
+@media (max-width: 720px) {
+  .form {
+    height: 424px;
+    -moz-column-gap: 16px;
+         column-gap: 16px;
+  }
+  .form__title {
+    margin-bottom: 16px;
+    font-size: 15px;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
+  .form__input-box {
+    row-gap: 10px;
+  }
+  .form__input-text, .form__politicy {
+    font-size: 12px;
+  }
+}
+@media (max-width: 610px) {
+  .form {
+    height: 664px;
+    gap: 16px;
+    margin-bottom: 90px;
+    grid-template-columns: 1fr;
+  }
+  .form__form {
+    grid-area: unset;
+  }
+  .form__title {
+    margin-bottom: 0;
+  }
+  .form__button-box {
+    margin-top: 26px;
+    align-items: flex-start;
+  }
+  .fake-checkbox {
+    width: 16px;
+  }
+}
 .contacts {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

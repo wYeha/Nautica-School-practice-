@@ -1,8 +1,10 @@
 .form {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: $content-gap-large;
+	grid-template-rows: auto 1fr;
+	column-gap: $content-gap-large;
 	margin-bottom: $block-margin-desktop;
+	height: 348px;
 
 	& input[type="text"],
 	& input[type="tel"],
@@ -12,10 +14,12 @@
 
 	&__title {
 		@include h3-desktop;
+		margin-bottom: 30px;
 	}
 
 	&__image {
 		border-radius: $border-radius;
+		background: center / cover no-repeat url("../images/form-image.jpg");
 	}
 
 	&__form {
@@ -50,6 +54,7 @@
 
 	&__button-box {
 		display: flex;
+		align-items: flex-start;
 		justify-content: space-between;
 	}
 
@@ -79,3 +84,131 @@
 }
 
 // стили для чекбокса в _globals.scss по поиску "стили для чекбокса"
+
+//media laptop
+@media (max-width: $container-desktop) {
+	.form {
+		height: 342px;
+		margin-bottom: $block-margin-laptop;
+
+		&__input-text {
+			max-width: unset;
+		}
+
+		&__title {
+			margin-bottom: 28px;
+			@include h3-laptop;
+		}
+
+		&__button {
+			@include button-small-design;
+			white-space: nowrap;
+		}
+	}
+
+	.fake-checkbox {
+		width: 19px;
+	}
+}
+
+//media tablet-portrait
+@media (max-width: $container-laptop) {
+	.form {
+		height: 446px;
+		column-gap: $content-gap-medium;
+		margin-bottom: $block-margin-tablet;
+
+		&__checkbox-box label {
+			gap: 8px;
+		}
+
+		&__button-box {
+			flex-direction: column;
+			align-items: flex-end;
+		}
+
+		&__label {
+			@include caption-label-tablet;
+		}
+
+		&__input-text {
+			max-width: none;
+			margin-bottom: 20px;
+		}
+
+		&__input-box {
+			row-gap: 16px;
+		}
+
+		&__input-box div:nth-child(3),
+		&__input-box div:nth-child(4) {
+			grid-column: span 2;
+		}
+
+		&__input {
+			gap: 5px;
+		}
+
+		& input[type="text"],
+		& input[type="tel"],
+		& input[type="email"] {
+			font-size: 13px;
+		}
+
+		&__title {
+			margin-bottom: 20px;
+			@include h3-tablet;
+		}
+	}
+}
+
+
+//media phone-landscape
+@media (max-width: $container-tablet-portrait) {
+	.form {
+		height: 424px;
+		column-gap: $content-gap-small;
+
+		&__title {
+			margin-bottom: 16px;
+			@include h3-phone-landscape;
+		}
+
+		&__input-box {
+			row-gap: 10px;
+		}
+
+		&__input-text,
+		&__politicy {
+			font-size: 12px;
+		}
+	}
+}
+
+
+//media phone
+@media (max-width: $container-phone-landscape) {
+	.form {
+		height: 664px;
+		gap: $content-gap-small;
+		margin-bottom: $block-margin-mobile;
+		grid-template-columns: 1fr;
+
+		&__form {
+			grid-area: unset;
+		}
+
+		&__title {
+			margin-bottom: 0;
+		}
+
+		&__button-box {
+			margin-top: 26px;
+			align-items: flex-start;
+		}
+	}
+
+	.fake-checkbox {
+		width: 16px;
+	}
+}

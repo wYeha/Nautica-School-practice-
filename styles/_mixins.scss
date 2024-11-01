@@ -62,6 +62,8 @@
 	&:disabled {}
 }
 
+
+
 // checkbox
 
 @mixin h1-desktop {
@@ -347,6 +349,13 @@
 	font-family: 'Noto Sans';
 	font-weight: 500;
 	font-size: 14px;
+	color: $color-black;
+}
+
+@mixin caption-label-tablet {
+	font-family: 'Noto Sans';
+	font-weight: 500;
+	font-size: 13px;
 	color: $color-black;
 }
 
