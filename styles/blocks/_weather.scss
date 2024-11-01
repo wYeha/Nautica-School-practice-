@@ -1,5 +1,6 @@
 .weather {
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 	gap: $content-gap-large;
 	height: 570px;
 	margin-bottom: $block-margin-desktop;
@@ -7,14 +8,19 @@
 	&__title {}
 
 	&__image {
+		grid-row: span 2;
 		border-radius: $border-radius;
+		background: center / cover no-repeat url("../images/weather-image.jpg");
+		transform: scale(-1, 1);
 	}
 
 	&__content {
+		height: 100%;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
-		gap: $content-gap-large;
+		padding: $content-gap-large;
+		background-color: $color-white;
+		border-radius: $border-radius;
 
 		&_title {
 			@include h6-desktop;
@@ -27,19 +33,10 @@
 		}
 	}
 
-	&__content-box {
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		padding: $content-gap-large;
-		background-color: $color-white;
-		border-radius: $border-radius;
-	}
-
 	&__article {}
 
 	&__button-box {
+		margin-top: 66px;
 		display: flex;
 		justify-content: space-between;
 	}
@@ -48,7 +45,10 @@
 		&_more {
 			@include button-medium;
 			color: $color-blue-500;
-			border-bottom: 1px solid $color-blue-500;
+
+			& span {
+				border-bottom: 1px solid $color-blue-500;
+			}
 		}
 	}
 
@@ -77,9 +77,10 @@
 
 	&__radio-box:after {
 		content: "";
-		height: 45px;
+		$radio-after-height: 45px;
+		height: $radio-after-height;
 		position: absolute;
-		top: calc(50% - 22.5px);
+		top: calc(50% - $radio-after-height / 2);
 		border-radius: 50px;
 		background-color: $color-blue-500;
 		z-index: -1;
@@ -116,4 +117,204 @@
 
 :checked+.radio-label {
 	color: $color-white;
+}
+
+
+//media laptop 
+@media (max-width: $container-desktop) {
+	.weather {
+		height: 462px;
+		margin-bottom: $block-margin-laptop;
+
+		&__content {
+			padding: 26px;
+
+			&_title {
+				@include h6-laptop;
+				padding-bottom: 12px;
+			}
+
+			&_text {
+				@include category-card-laptop;
+			}
+		}
+
+		&__article {}
+
+		&__button-box {
+			margin-top: 17px;
+		}
+
+		&__button {
+			&_more {
+				@include button-small;
+			}
+		}
+
+		&__signup {
+			&_text {
+				@include button-small;
+			}
+		}
+
+		&__radio-box {
+			margin-bottom: 20px;
+			padding: 0 4px;
+			gap: 6px;
+			height: 41px;
+			width: 245px;
+		}
+
+		&__radio-box:after {
+			$radio-after-height: 33px;
+			height: $radio-after-height;
+			top: calc(50% - $radio-after-height / 2);
+		}
+
+		&__radio-box:has(#one:checked):after {
+			left: 4px;
+			width: 63px;
+		}
+
+		&__radio-box:has(#two:checked):after {
+			left: 74px;
+			width: 85px;
+		}
+
+		&__radio-box:has(#three:checked):after {
+			left: 165px;
+			width: 74px;
+		}
+	}
+
+	.radio-label {
+		@include pills-extra-small;
+		padding: 12px 20px;
+	}
+}
+
+
+//media tablet-portrait
+@media (max-width: $container-laptop) {
+	.weather {
+		gap: $content-gap-medium;
+		margin-bottom: $block-margin-tablet;
+		grid-template-rows: 254px 163px;
+		height: auto;
+
+		&__image {
+			grid-row: span 1;
+		}
+
+		&__content {
+			padding: 18px;
+			justify-content: space-between;
+
+			&_title {
+				@include h6-tablet;
+				padding-bottom: 10px;
+			}
+
+			&_wide {
+				grid-column: span 2;
+			}
+
+			&_text {
+				@include category-card-tablet;
+			}
+		}
+
+		&__button-box {
+			margin-top: 0;
+		}
+
+		&__button {
+			&_more {
+				@include button-small;
+			}
+		}
+
+		&__signup {
+			&_text {
+				@include button-small;
+			}
+		}
+
+		&__radio-box {
+			margin-bottom: 0;
+			padding: 0 4px;
+			gap: 6px;
+			height: 41px;
+			width: 245px;
+		}
+	}
+
+	.radio-label {
+		@include pills-extra-small;
+		padding: 12px 20px;
+	}
+}
+
+
+//media phone-landscape
+@media (max-width: $container-tablet-portrait) {
+	.weather {
+		gap: $content-gap-small;
+	}
+}
+
+
+//media phone
+@media (max-width: $container-phone-landscape) {
+	.weather {
+		margin-bottom: $block-margin-mobile;
+		grid-template: none;
+
+		&__image {
+			height: 170px;
+		}
+
+		&__content {
+
+			&_title {
+				padding-bottom: 8px;
+			}
+
+			&_wide {
+				grid-column: 1;
+			}
+		}
+
+		&__radio-box {
+			margin-bottom: 12px;
+		}
+
+		&__button_more {}
+
+		&__button-box {
+			margin-top: 16px;
+			flex-wrap: wrap;
+		}
+
+		&__signup {}
+	}
+}
+
+@media (max-width: 452px) {
+	.weather {
+
+		&__button-box {
+			justify-content: flex-start;
+			padding-bottom: 40px;
+			position: relative;
+		}
+
+		&__button_more {}
+
+		&__signup {
+			position: absolute;
+			right: 0;
+			top: 40px;
+		}
+	}
 }

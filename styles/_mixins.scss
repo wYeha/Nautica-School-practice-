@@ -276,6 +276,14 @@
 	color: $color-black;
 }
 
+@mixin category-card-tablet {
+	font-family: 'Noto Sans';
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 130%;
+	color: $color-black;
+}
+
 
 //button
 
@@ -349,6 +357,14 @@
 	font-family: 'Noto Sans';
 	font-weight: 400;
 	font-size: 18px;
+	line-height: 130%;
+	color: $color-dark-blue;
+}
+
+@mixin pills-extra-small {
+	font-family: 'Noto Sans';
+	font-weight: 400;
+	font-size: 13px;
 	line-height: 130%;
 	color: $color-dark-blue;
 }

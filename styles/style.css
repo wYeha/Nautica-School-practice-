@@ -1319,12 +1319,6 @@ input[type=checkbox]:hover + .fake-checkbox {
     font-size: 38px;
     color: #373F51;
   }
-  .advantages__number-text {
-    font-family: "Noto Sans";
-    font-weight: 400;
-    font-size: 12px;
-    color: #373F51;
-  }
 }
 @media (max-width: 610px) {
   .advantages {
@@ -1364,19 +1358,25 @@ input[type=checkbox]:hover + .fake-checkbox {
   }
 }
 .weather {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
   height: 570px;
   margin-bottom: 150px;
 }
 .weather__image {
+  grid-row: span 2;
   border-radius: 7px;
+  background: center/cover no-repeat url("../images/weather-image.jpg");
+  transform: scale(-1, 1);
 }
 .weather__content {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 30px;
+  padding: 30px;
+  background-color: #FBFBFB;
+  border-radius: 7px;
 }
 .weather__content_title {
   font-size: 24px;
@@ -1391,16 +1391,8 @@ input[type=checkbox]:hover + .fake-checkbox {
   line-height: 130%;
   color: #2B2B2B;
 }
-.weather__content-box {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 30px;
-  background-color: #FBFBFB;
-  border-radius: 7px;
-}
 .weather__button-box {
+  margin-top: 66px;
   display: flex;
   justify-content: space-between;
 }
@@ -1410,6 +1402,8 @@ input[type=checkbox]:hover + .fake-checkbox {
   font-size: 14px;
   line-height: 143%;
   color: #2892D7;
+}
+.weather__button_more span {
   border-bottom: 1px solid #2892D7;
 }
 .weather__signup_text {
@@ -1471,6 +1465,172 @@ input[type=checkbox]:hover + .fake-checkbox {
   color: #FBFBFB;
 }
 
+@media (max-width: 1170px) {
+  .weather {
+    height: 462px;
+    margin-bottom: 130px;
+  }
+  .weather__content {
+    padding: 26px;
+  }
+  .weather__content_title {
+    font-size: 20px;
+    line-height: 120%;
+    padding-bottom: 12px;
+  }
+  .weather__content_text {
+    font-family: "Noto Sans";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    color: #2B2B2B;
+  }
+  .weather__button-box {
+    margin-top: 17px;
+  }
+  .weather__button_more {
+    font-family: "Noto Sans";
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 138%;
+  }
+  .weather__signup_text {
+    font-family: "Noto Sans";
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 138%;
+  }
+  .weather__radio-box {
+    margin-bottom: 20px;
+    padding: 0 4px;
+    gap: 6px;
+    height: 41px;
+    width: 245px;
+  }
+  .weather__radio-box:after {
+    height: 33px;
+    top: calc(50% - 16.5px);
+  }
+  .weather__radio-box:has(#one:checked):after {
+    left: 4px;
+    width: 63px;
+  }
+  .weather__radio-box:has(#two:checked):after {
+    left: 74px;
+    width: 85px;
+  }
+  .weather__radio-box:has(#three:checked):after {
+    left: 165px;
+    width: 74px;
+  }
+  .radio-label {
+    font-family: "Noto Sans";
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 130%;
+    color: #373F51;
+    padding: 12px 20px;
+  }
+}
+@media (max-width: 954px) {
+  .weather {
+    gap: 24px;
+    margin-bottom: 110px;
+    grid-template-rows: 254px 163px;
+    height: auto;
+  }
+  .weather__image {
+    grid-row: span 1;
+  }
+  .weather__content {
+    padding: 18px;
+    justify-content: space-between;
+  }
+  .weather__content_title {
+    font-size: 16px;
+    line-height: 120%;
+    padding-bottom: 10px;
+  }
+  .weather__content_wide {
+    grid-column: span 2;
+  }
+  .weather__content_text {
+    font-family: "Noto Sans";
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 130%;
+    color: #2B2B2B;
+  }
+  .weather__button-box {
+    margin-top: 0;
+  }
+  .weather__button_more {
+    font-family: "Noto Sans";
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 138%;
+  }
+  .weather__signup_text {
+    font-family: "Noto Sans";
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 138%;
+  }
+  .weather__radio-box {
+    margin-bottom: 0;
+    padding: 0 4px;
+    gap: 6px;
+    height: 41px;
+    width: 245px;
+  }
+  .radio-label {
+    font-family: "Noto Sans";
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 130%;
+    color: #373F51;
+    padding: 12px 20px;
+  }
+}
+@media (max-width: 720px) {
+  .weather {
+    gap: 16px;
+  }
+}
+@media (max-width: 610px) {
+  .weather {
+    margin-bottom: 90px;
+    grid-template: none;
+  }
+  .weather__image {
+    height: 170px;
+  }
+  .weather__content_title {
+    padding-bottom: 8px;
+  }
+  .weather__content_wide {
+    grid-column: 1;
+  }
+  .weather__radio-box {
+    margin-bottom: 12px;
+  }
+  .weather__button-box {
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 452px) {
+  .weather__button-box {
+    justify-content: flex-start;
+    padding-bottom: 40px;
+    position: relative;
+  }
+  .weather__signup {
+    position: absolute;
+    right: 0;
+    top: 40px;
+  }
+}
 .form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
