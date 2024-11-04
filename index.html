@@ -11,17 +11,17 @@
 <body>
 
 	<style>
-		.header,
+		/* .header,
 		.intro,
 		.description-block,
 		.services__container,
 		.advantages,
 		.weather,
 		.form,
-		/* .contacts, */
+		.contacts,
 		.footer {
 			display: none;
-		}
+		} */
 	</style>
 
 	<header class="header center">
@@ -56,15 +56,42 @@
 				</ul>
 			</nav>
 
-			<input type="checkbox" id="burger" checked>
-			<label class="burger" for="burger">
-				<div class="burger-box">
-					<div class="burger-1"></div>
-					<div class="burger-2"></div>
-					<div class="burger-3"></div>
-				</div>
-			</label>
 			<a class="phone-number phone-number_top link-effects" href="tel:+78694684868">+ 7 869 468 48 68</a>
+
+			<details class="details">
+				<summary class="summary">
+					<div class="burger">
+						<div class="burger-1"></div>
+						<div class="burger-2"></div>
+						<div class="burger-3"></div>
+					</div>
+				</summary>
+
+				<div class="burger-content">
+					<nav class="header__nav header__nav_burger">
+						<ul class="header__ul_burger">
+							<li class="header__li">
+								<a href="#services" class="header__a link-effects">Услуги</a>
+							</li>
+							<li class="header__li">
+								<a href="#certificates" class="header__a link-effects">Сертификаты</a>
+							</li>
+							<li class="header__li">
+								<a href="#about" class="header__a link-effects">О нас</a>
+							</li>
+							<li class="header__li">
+								<a href="#weather" class="header__a link-effects">Погода</a>
+							</li>
+							<li class="header__li">
+								<a href="#contacts" class="header__a link-effects">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+
+					<a class="phone-number phone-number_burger link-effects" href="tel:+78694684868">+ 7 869 468 48 68</a>
+				</div>
+			</details>
+
 		</div>
 	</header>
 
@@ -313,7 +340,8 @@
 	</section>
 
 	<section class="form center">
-		<h3 class="form__title">Заполните форму и получите <span class="text-accent">скидку на первое посещение</span></h3>
+		<h3 class="form__title">Заполните форму и получите <span class="text-accent">скидку на&nbsp;первое посещение</span>
+		</h3>
 		<div class="form__image"></div>
 
 		<form class="form__form" action="">
@@ -441,22 +469,22 @@
 				<a href="mailto:nautica@mail.ru" class="link-effects">nautica@mail.ru</a>
 				<ul class="footer__socials-list">
 					<li class="footer__socials-item">
-						<a href="">
+						<a href="#!">
 							<img src="images/svg/tg-image.svg" alt="Телеграм">
 						</a>
 					</li>
 					<li class="footer__socials-item">
-						<a href="">
+						<a href="#!">
 							<img src="images/svg/whatsup-image.svg" alt="Ватсап">
 						</a>
 					</li>
 					<li class="footer__socials-item">
-						<a href="">
+						<a href="#!">
 							<img src="images/svg/vk-image.svg" alt="ВКонтакте">
 						</a>
 					</li>
 					<li class="footer__socials-item">
-						<a href="">
+						<a href="#!">
 							<img src="images/svg/insta-image.svg" alt="Инстаграм">
 						</a>
 					</li>

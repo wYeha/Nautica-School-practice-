@@ -138,9 +138,7 @@
 			height: auto;
 		}
 
-		&__button {
-			width: auto;
-		}
+		&__button {}
 	}
 }
 
@@ -159,16 +157,15 @@
 
 		&__info {
 			align-self: flex-start;
-		}
-
-		&__title {
-			@include h6-phone-portrait;
+			width: 100%;
 		}
 
 		&__map {
 			height: 301px;
 		}
 
-		&__button {}
+		&__button {
+			width: auto;
+		}
 	}
 }

@@ -80,3 +80,83 @@
 .phone-number {}
 
 .phone-number-bottom {}
+
+
+//media laptop
+@media (max-width: $container-desktop) {
+	.footer {
+
+		&__adress,
+		&__nav-element a {
+			@include text-laptop;
+		}
+
+		&__content {
+			& a {
+				@include text-laptop;
+			}
+		}
+
+		&__adress-box {
+			max-width: 180px;
+		}
+	}
+}
+
+//media tablet-portrait
+@media (max-width: $container-laptop) {
+	.footer {
+
+		&__adress,
+		&__nav-element a {
+			@include text-tablet;
+		}
+
+		&__content {
+			& a {
+				@include text-tablet;
+			}
+		}
+
+		&__adress-box {
+			max-width: 152px;
+		}
+
+		&__politicy {
+			font-size: 13px;
+		}
+	}
+}
+
+//media phone
+@media (max-width: $container-phone-landscape) {
+	.footer {
+
+		&__adress,
+		&__nav-element a {
+			@include text-phone;
+		}
+
+		&__container {
+			flex-direction: column;
+			gap: 24px;
+		}
+
+		&__adress-box {
+			max-width: unset;
+			gap: 5px;
+		}
+
+		&__socials-block {
+			gap: 5px;
+		}
+
+		&__nav-list {
+			gap: 0;
+		}
+
+		&__h6 {
+			padding-bottom: 4px;
+		}
+	}
+}

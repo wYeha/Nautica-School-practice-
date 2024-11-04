@@ -11,6 +11,14 @@
 	margin-right: calc(50% - $container-desktop / 2);
 }
 
+summary {
+	display: block;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
 body {
 	background-color: $color-white-blue;
 }
@@ -399,5 +407,16 @@ input[type="checkbox"]:hover+.fake-checkbox {
 	.center {
 		margin-left: 16px;
 		margin-right: 16px;
+	}
+}
+
+
+@media (max-width: $container-phone-landscape) {
+
+	p,
+	span,
+	h2,
+	h3 {
+		max-width: 340px;
 	}
 }
