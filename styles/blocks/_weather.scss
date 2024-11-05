@@ -10,7 +10,8 @@
 	&__image {
 		grid-row: span 2;
 		border-radius: $border-radius;
-		background: center / cover no-repeat url("../images/weather-image.jpg");
+		background: center / cover no-repeat;
+		background-image: url("../images/weather-image.jpg");
 		transform: scale(-1, 1);
 	}
 

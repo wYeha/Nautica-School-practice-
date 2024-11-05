@@ -1443,7 +1443,8 @@ input[type=checkbox]:hover + .fake-checkbox {
 .weather__image {
   grid-row: span 2;
   border-radius: 7px;
-  background: center/cover no-repeat url("../images/weather-image.jpg");
+  background: center/cover no-repeat;
+  background-image: url("../images/weather-image.jpg");
   transform: scale(-1, 1);
 }
 .weather__content {
