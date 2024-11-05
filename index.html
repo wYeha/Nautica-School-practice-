@@ -10,20 +10,6 @@
 
 <body>
 
-	<style>
-		/* .header,
-		.intro,
-		.description-block,
-		.services__container,
-		.advantages,
-		.weather,
-		.form,
-		.contacts,
-		.footer {
-			display: none;
-		} */
-	</style>
-
 	<header class="header center">
 		<div class="header__inner container-desktop">
 			<a href="index.html" class="header__logo logo">
@@ -258,31 +244,31 @@
 
 	<section class="weather center" id="weather">
 		<h3 class="weather__title visually-hidden">Разнообразие яхт</h3>
-		<div class="weather__image"></div>
+		<div class="weather__image" id="fluidImage"></div>
 
 		<div class="weather__content">
 			<ul class="weather__radio-box">
 				<li class="weather__radio-item">
-					<input class="radio-input" type="radio" name="item" id="one" checked>
+					<input class="radio-input" type="radio" value="luch" name="item" id="one" checked>
 					<label class="radio-label" for="one">Луч</label>
 				</li>
 
 				<li class="weather__radio-item">
-					<input class="radio-input" type="radio" name="item" id="two">
+					<input class="radio-input" type="radio" value="soling" name="item" id="two">
 					<label class="radio-label" for="two">Солинг</label>
 				</li>
 
 				<li class="weather__radio-item">
-					<input class="radio-input" type="radio" name="item" id="three">
+					<input class="radio-input" type="radio" value="finn" name="item" id="three">
 					<label class="radio-label" for="three">Финн</label>
 				</li>
 			</ul>
 
 			<article class="weather__article">
 				<h6 class="weather__content_title">
-					Яхта <span class="text-accent">&laquo;Луч&raquo;</span>
+					Яхта <span id="fluidTitle" class="text-accent">«Луч»</span>
 				</h6>
-				<p class="weather__content_text">
+				<p class="weather__content_text" id="fluidText">
 					&laquo;Луч&raquo;&nbsp;&mdash; олимпийский класс яхт, предназначенный для одного человека, который
 					одновременно занимается и&nbsp;управлением яхтой, и&nbsp;настройкой паруса. Открытый кокпит и&nbsp;легкий
 					вес
@@ -295,14 +281,12 @@
 		<div class="weather__content weather__content_wide">
 			<article class="weather__article">
 				<h6 class="weather__content_title">
-					Идеальная погода для яхты <span class="text-accent">&laquo;Луч&raquo;</span>
+					Идеальная погода для яхты <span class="text-accent" id="fluidTitleWide">«Луч»</span>
 				</h6>
 
-				<p class="weather__content_text">
-					Сегодня отличная возможность потренироваться на&nbsp;швертботе &laquo;Луч&raquo;. Не&nbsp;забудьте
-					прихватить
-					с&nbsp;собой крем SPF, чтобы ваше плавание было приятным и&nbsp;безопасным, а&nbsp;остальное&nbsp;&mdash;
-					за&nbsp;нами!
+				<p class="weather__content_text" id="fluidTextWide">
+					Сегодня отличная возможность потренироваться на швертботе «Луч». Не забудьте прихватить с собой крем SPF,
+					чтобы ваше плавание было приятным и безопасным, а остальное — за нами!
 				</p>
 
 
